@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Notes — Deeptalk Signals Brainstorm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("ids-theme");
+          if (saved === "dark" || (!saved && matchMedia("(prefers-color-scheme: dark)").matches)) {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="css/tokens/palette.css" />
+    <link rel="stylesheet" href="css/tokens/colors.css" />
+    <link rel="stylesheet" href="css/tokens/scales.css" />
+    <link rel="stylesheet" href="css/settings.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/page-composition/layout.css" />
+    <link rel="stylesheet" href="css/components/ids.css" />
+    <link rel="stylesheet" href="css/components/theme-toggle.css" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body class="ids">
+    <main>
+      <div class="ids__wrapper notes">
+        <div class="ids__space M"></div>
+        <h1 class="XS">Notes</h1>
+        <p class="notes-intro">Fragmentary notes, bonus ideas, and signals that aren't really about audio — moved out of <a href="index.html">the table</a> so they don't get lost. Original language preserved.</p>
+
+        <h2 class="S">Ilya Sinelnikov</h2>
+
+        <h3>Loose notes</h3>
+        <p class="notes-pre">+ У людей лаг, они говорят поверх не потому что перебивают, а из-за лага
+Выключенный микрофон может что-то значить:
+— сам факт может значить
+— велма должна знать, чё там с микрофонами
+
+включил микрофон, потому что хотел сказать, но не дали, поэтому выключил обратно (включение микрофоне, если он был долго выключен = аккуратное поднятие руки)
+
+hesitation это и эмоция, и модальность — получается, нужна эмоция, которая позволит много сигналов сконструировать
+
+учитывать культурные различия для коммуникации
+пример: в США когда тебе говорят «нам очень нравится с вами работать, вы молодцы» почти наверняка значит что тебя уволят</p>
+
+        <h3>Approach</h3>
+        <p class="notes-pre">Я подошел с позиции, какие типичные переговорные проблемы я сам, как круч, учу студентов? Это значит, что проблемы имеют теоретическию базу, понятные тригеры, типичные примеры. Значит, ИИ может их распознавать даже сейчас с высокой долей вероятности. Я меньше думал, только ЛЛМ может или нужен голос. Например, можно брать задачник “Перегородка” где 100 примеров разбитых по главам и прям его давать (перевести агентом в один присест (мне самому давно пора перевести). Понятно, что тут много. Но я давно мечтал сделать агента, который по Кемпу может анализировать. А вот теперь есть все инструменты.
+
+И я добавил колонку — что нужно подсказать.
+
+Еще идея — нужен режим, когда ты можешь включить тип-толк просто на физической встрече! Все настройки сохранены. Можешь вписать имена в контекст. Но просто должно работать!</p>
+
+        <h3>Negotiation signals, not tied to audio</h3>
+
+        <h4>Potential dishonesty (вранье, обман)</h4>
+        <p class="notes-pre">Человечество и фантсты мечтает об этом с античных времен. Машина, которая может определять ложь.
+→ Просто знать. Задать наводящие вопросы</p>
+
+        <h4>Манипуляция (в целом и конкретные)</h4>
+        <p class="notes-pre">Манипуляции нельзя проглотит
+→ Проговорить манипуляцию!</p>
+
+        <h4>Ты лишаешь права на нет</h4>
+        <p class="notes-pre">— Созвонимся завтра в 10.
+LLM: Может, но не всегда точно?
+Люди очень чувствительны к лишению права не нет.
+→ Срочно прямым текстом проговорить, что у клиента есть право отказатьсятя</p>
+
+        <h4>Тебя лишают права на нет</h4>
+        <p class="notes-pre">→ Активно напомнить, что ты пока не уверен, не согласен и хочешь подумать (отвоевать себе право на нет)</p>
+
+        <h4>Ты испытываешь нужду</h4>
+        <p class="notes-pre">→ Скорректировать речь — подчеркнуть, что ты не нуждаешься</p>
+
+        <h4>Собеседник испытывает нужду</h4>
+        <p class="notes-pre">→ Помочь увидеть, что он не раб, и нормально может быть и так</p>
+
+        <h4>Ты не в мире клиента</h4>
+        <p class="notes-pre">— Нам удобно вот так. Мы хотим
+→ Скорректировать речь в русле «А что вам полезно»</p>
+
+        <h4>Закрытые (ограниченные, неразвернутые) ответы</h4>
+        <p class="notes-pre">→ Переспросить открыто</p>
+
+        <h4>Закрытые вопросы</h4>
+        <p class="notes-pre">→ Переспросить открыто</p>
+
+        <h4>Отсутствие повестки, сигналы, что собеседник не знает, не понимает цели и плана</h4>
+        <p class="notes-pre">→ Напомнить вслух проговорить цель</p>
+
+        <h2 class="S">Eugene Arutyunov</h2>
+
+        <h3>Speech Navigator behaviors, not tied to audio</h3>
+
+        <h4>Ходишь по кругу</h4>
+        <p class="notes-pre">повторяешь уже сказанное, не добавляя нового</p>
+
+        <h4>Ушёл слишком далеко от темы</h4>
+        <p class="notes-pre">❓ от темы разговора? от заявленной повестки?</p>
+
+        <h4>💡 Незаконченные мысли</h4>
+        <p class="notes-pre">бросаешь мысль и перескакиваешь на другую, не довёл до точки</p>
+
+        <h4>💡 Перегруз деталями</h4>
+        <p class="notes-pre">уровень детализации избыточен для вопроса/аудитории</p>
+
+        <h4>💡 Неуверенные формулировки</h4>
+        <p class="notes-pre">систематические хеджи («наверное», «мне кажется», «не уверен, но») там, где утверждаешь</p>
+
+        <h4>Закрытый вопрос вместо открытого</h4>
+        <p class="notes-pre">задал закрытый вопрос там, где открытый дал бы больше (наш кастом, ✅ перенесён из Key Moments)</p>
+
+        <h3>Direct data in the output</h3>
+        <p class="notes-pre">Производные единицы данных (внутренности модуля): темп речи, плотность смысла.
+Темп речи и плотность смысла — идут напрямую в отчёт и могут выводиться на экране в звонке.</p>
+
+        <h2 class="S">Pauline Perevalova</h2>
+
+        <h3>Бонусы</h3>
+        <p class="notes-pre">— Цоканье + громкий выдох — «скажи словами че не нравится»;
+
+— «критикуй не человека, а его работу/поступки»;
+
+— культурные различия по Эрин Мейер, это целый отдельный большой пласт сигналов типа «не переживай, американец, у них во Франции принято говорить прямо, ты не плохой»;
+
+— для занятий музыкой тюнер для голоса или для инструмента, фиксация изменения темпа, сбивки ритма и тд.</p>
+
+        <h2 class="S">Irina Zakharova</h2>
+
+        <h3>Illusory agreement, or Nobody understood anything</h3>
+        <p class="notes-caption">The author flags this one as detectable from the meeting's context, not from audio — so it lives here as a bonus.</p>
+        <p class="notes-pre">— Okay, let's finalize: we do a quick version of the payment integration, no polish, the main thing is that it works for the investor demo. Everyone agreed?
+
+— Yes, makes sense. Quick it is.
+
+— Yep, I'm on board. No polish — that takes a lot off our plate.
+
+— Great, so it's decided. Let's go build it.
+
+Why an LLM with a transcript can't do this: by the transcript everyone understood everything — and by the audio, too, actually. This needs a deeper analysis of what was said. If, for instance, a product manager and developers were talking, they may hold different understandings of the same words:
+
+- The PM meant: at the demo there will be live payment — the investor pulls out a card, pays, it goes through.
+- The first developer understood: "quick version" = the payment provider's test mode, sandbox. It's a demo, after all!
+- The second developer understood: "no polish" — one card, one scenario, no error handling — enough for a demo.
+
+This can't be grasped from audio or from text, but it can be grasped from the meeting's context — nobody spelled out expectations or commitments. A complex topic closed in 20 seconds without a single clarifying question, with three happy "yes"es, is statistically suspicious: the easier the agreement came, the more likely each person has their own understanding of what was said. This can be a trigger for a check.
+
+Why it matters: unspoken expectations turn into rework, at a point when there's no time left for it.</p>
+
+        <div class="ids__space L"></div>
+      </div>
+    </main>
+
+    <button class="ids__theme-toggle" role="switch" aria-checked="false" aria-label="Dark theme">
+      <span class="ids__theme-toggle__track"><span class="ids__theme-toggle__thumb"></span></span>
+    </button>
+
+    <script src="js/theme-toggle.js"></script>
+  </body>
+</html>

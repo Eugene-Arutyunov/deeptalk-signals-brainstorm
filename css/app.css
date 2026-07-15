@@ -3,28 +3,27 @@
 
 .ids h1.XS {
   margin-top: 0;
-  margin-bottom: calc(var(--ids__density) * 0.5em);
+  margin-bottom: 0.2em;
+}
+
+.notes-link {
+  font-size: 0.68em;
+  margin-bottom: calc(var(--ids__density) * 1.2em);
 }
 
 /* Фильтры — в потоке над таблицей, не стикаются */
 
 .signals-filters {
   margin-bottom: calc(var(--ids__density) * 0.75em);
-  font-size: 0.8em;
+  font-size: 0.68em;
 }
 
 .signals-filters__group {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.35em;
+  gap: 0.3em;
   margin-bottom: 0.5em;
-}
-
-.signals-filters__label {
-  color: var(--ids__text-caption);
-  margin-right: 0.4em;
-  min-width: 4.5em;
 }
 
 .signals-chip {
@@ -32,7 +31,7 @@
   font: inherit;
   color: var(--ids__text);
   cursor: pointer;
-  padding: 0.15em 0.7em 0.25em;
+  padding: 0.1em 0.6em 0.2em;
   border: var(--ids__border-width-s) solid var(--ids__border);
   border-radius: var(--ids__radius-pill);
   background: none;
@@ -48,17 +47,19 @@
   }
 }
 
-.signals-count {
-  color: var(--ids__text-caption);
-  margin-bottom: 0;
-}
-
 /* Таблица: ширины, сортировка. Стики th — из ids. */
 
 .signals-table {
   width: 100%;
-  font-size: 0.72em;
-  background-color: var(--ids__background); /* th наследуют непрозрачный фон для стики-шапки */
+  font-size: 0.68em;
+  background-color: var(--ids__background);
+
+  & th {
+    /* Явный фон и паддинг сверху, чтобы в застиканном состоянии
+       контент не просвечивал над ячейками */
+    background-color: var(--ids__background);
+    padding-top: 0.6em;
+  }
 
   & th[data-sort] {
     cursor: pointer;
@@ -80,18 +81,24 @@
 
   & th,
   & td {
-    &:nth-child(1) {
-      min-width: 8em;
-      font-weight: 550;
-    }
-    &:nth-child(5),
-    &:nth-child(6) {
+    &:nth-child(6),
+    &:nth-child(7) {
       min-width: 7em;
     }
   }
 
+  & .signals-table__num {
+    min-width: 1.8em;
+    color: var(--ids__text-caption);
+  }
+
+  & .signals-cell-signal {
+    min-width: 9em;
+    font-weight: 700;
+  }
+
   & .signals-table__likes {
-    min-width: 3em;
+    min-width: 1.6em;
     text-align: center;
   }
 
@@ -100,8 +107,20 @@
   }
 }
 
+.signals-kiki {
+  width: 0.9em;
+  height: 0.9em;
+  display: inline-block;
+  vertical-align: -0.08em;
+  margin-right: 0.35em;
+}
+
 .signals-cell-text {
   white-space: pre-line;
+}
+
+.signals-src-line {
+  margin-top: 0.7em;
 }
 
 .signals-src-button {
@@ -179,4 +198,36 @@
     border-radius: var(--ids__radius-s);
     padding: calc(var(--ids__density) * 0.4em) calc(var(--ids__density) * 0.5em);
   }
+}
+
+/* Страница заметок */
+
+.notes-intro {
+  margin-bottom: calc(var(--ids__density) * 1.2em);
+}
+
+.ids .notes-pre {
+  white-space: pre-line;
+  margin-bottom: calc(var(--ids__density) * 1em);
+}
+
+.ids .notes-caption {
+  font-size: 0.8em;
+  color: var(--ids__text-caption);
+  margin-bottom: 0.5em;
+}
+
+.ids .notes h2.S {
+  margin-top: calc(var(--ids__density) * 1.2em);
+  margin-bottom: 0.4em;
+}
+
+.ids .notes h3 {
+  margin-top: calc(var(--ids__density) * 0.8em);
+  margin-bottom: 0.3em;
+}
+
+.ids .notes h4 {
+  margin-top: calc(var(--ids__density) * 0.6em);
+  margin-bottom: 0.2em;
 }

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>deeptalk-signals-brainstorm</title>
+    <title>Deeptalk Signals Brainstorm</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
     <script>
@@ -29,31 +29,27 @@
     <main>
       <div class="ids__wrapper XL">
         <div class="ids__space M"></div>
-        <h1 class="XS">deeptalk-signals-brainstorm</h1>
+        <h1 class="XS">Deeptalk Signals Brainstorm</h1>
+        <p class="notes-link"><a href="notes.html">Notes: fragments, bonuses, non-audio signals</a></p>
 
         <div class="signals-filters">
-          <div class="signals-filters__group" id="filter-categories">
-            <span class="signals-filters__label">Category</span>
-          </div>
-          <div class="signals-filters__group" id="filter-authors">
-            <span class="signals-filters__label">Author</span>
-          </div>
-          <p class="signals-count" id="signals-count"></p>
+          <div class="signals-filters__group" id="filter-categories"></div>
+          <div class="signals-filters__group" id="filter-authors"></div>
         </div>
 
         <table class="signals-table" id="signals-table">
           <thead>
             <tr>
+              <th data-sort="n" class="signals-table__num">#</th>
               <th data-sort="signal">Signal</th>
               <th data-sort="description">Description</th>
               <th data-sort="importance">Importance</th>
               <th data-sort="audioWhy">STT + LLM can't do it</th>
               <th data-sort="categories">Category</th>
               <th data-sort="authors">Author</th>
-              <th data-sort="ilyaLikes" class="signals-table__likes">Ilya likes</th>
-              <th data-sort="eugeneLikes" class="signals-table__likes">Eugene likes</th>
-              <th data-sort="grahamLikes" class="signals-table__likes">Graham likes</th>
-              <th class="signals-table__src">src</th>
+              <th data-sort="ilyaLikes" class="signals-table__likes">I</th>
+              <th data-sort="eugeneLikes" class="signals-table__likes">E</th>
+              <th data-sort="grahamLikes" class="signals-table__likes">G</th>
             </tr>
           </thead>
           <tbody id="signals-tbody"></tbody>

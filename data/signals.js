@@ -50,7 +50,7 @@ const SIGNALS = [
     description: "After a long discussion someone says:\n— So the problem isn't the solution itself, but that we won't have time to test it?\n\nSeveral participants react almost simultaneously:\n— Ahh. — Yes, exactly. — Precisely! — Now I get it.\n\nAfter that, participants develop the same formulation and ask more specific questions.",
     importance: "Preserves the formulation that visibly clarified the problem for several people at once — a moment worth showing in Key Moments and saving in the report as a great explanation or an important turn of the conversation. A positive descriptive signal that can be shown publicly.",
     audioWhy: "The words “yes”, “right” and “got it” alone don't prove the group actually reached shared understanding. What matters is the synchrony of the reactions, their intonation and speed, and the change in group behavior after one specific line. Short vocal reactions like “ahh” may not make it into the transcript at all.",
-    categories: ["Group dynamics", "Breath & micro-sounds"],
+    categories: ["Group dynamics", "Micro-sounds & backchannel"],
     authors: ["Eugene Vlasov"],
     ilyaLikes: true, eugeneLikes: false, grahamLikes: false,
     src: [
@@ -86,7 +86,7 @@ const SIGNALS = [
     description: "— Can you finish this by Friday?\n(long pause, an inhale)\n— Yes. (quiet, drawn out, almost a question; nothing added after)\n\nOther shapes of the same signal:\n— You'll do it by Wednesday? — Well… okay.\n— Who's going to handle client comms? — I'll take it. (with a sigh)\n— Will the tests pass by Thursday? — Yes, they'll pass. The main scenarios we've already… anyway, yes, they'll pass by Thursday.",
     importance: "Keeps a formal confirmation from being taken for a reliable commitment: instead of fixing the deadline right away, you can clarify risks or offer help. Ownership showed up on paper, but the task was taken reluctantly — a risk of missed deadlines and quiet burnout. For a team, honesty and the ability to say no matter: confident words in an uncertain tone mean problems may surface later. Important not to claim “the person won't deliver” — the system observes the delivery, not intentions.",
     audioWhy: "The transcript keeps a confident, unambiguous “Yes.” Text can't show the unusually long pause before the answer, the sigh, the quiet voice, slowed speech, or the questioning intonation relative to how this person normally speaks — sighs and breathing don't make it into the transcript at all.",
-    categories: ["Agreement & commitment", "Pauses & silence", "Breath & micro-sounds"],
+    categories: ["Agreement & commitment", "Pauses & silence", "Micro-sounds & backchannel"],
     authors: ["Eugene Vlasov", "Daria Kochenova", "Nikita Nova", "Irina Zakharova"],
     ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
     src: [
@@ -126,7 +126,7 @@ const SIGNALS = [
     description: "At the start of an explanation, participants react regularly:\n— Uh-huh. — Yes. — Got it.\n\nA few minutes in, these reactions disappear. The speaker keeps talking at the same tempo and makes no pauses for questions.",
     importance: "Vanishing reactions don't prove people lost attention or stopped understanding — but it's a good moment to stop and check on the listeners. Useful for presentations, demos, and long explanations. Suggested wording: “Listeners' vocal reactions have become much rarer. Pause and check that everything is clear.”",
     audioWhy: "Short reactions often don't make it into the transcript. Detecting the signal means comparing the frequency and character of vocal feedback across different parts of the explanation.",
-    categories: ["Backchannel"],
+    categories: ["Micro-sounds & backchannel"],
     authors: ["Eugene Vlasov"],
     ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
     src: [
@@ -163,7 +163,7 @@ const SIGNALS = [
     description: "By the end of a long meeting, a participant's voice becomes weaker and less stable, breathing quickens, phrase endings fade, and the tempo starts to waver. Meanwhile the person keeps speaking coherently and never says they're tired.",
     importance: "Helps to offer a break in time, hand over the floor, or postpone an important decision: “Your vocal strain has grown noticeably. If important decisions are still ahead, it's worth taking a pause.”",
     audioWhy: "The text can stay as clear as at the start of the meeting. Meeting length alone doesn't prove that a particular person is tired. The signal needs the dynamics of their voice, breathing and articulation relative to their own delivery at the start of the conversation.",
-    categories: ["Personal baseline", "Breath & micro-sounds", "Emotion & mood"],
+    categories: ["Personal baseline", "Micro-sounds & backchannel", "Emotion & mood"],
     authors: ["Daler Aliyorov"],
     ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
     src: [
@@ -175,7 +175,7 @@ const SIGNALS = [
     description: "A person starts to speak more directly, cuts themselves off abruptly, and continues noticeably quieter or more carefully.",
     importance: "A private signal can give the person back the chance to voice an important thought without revealing it to the other participants: “You started a more direct formulation and abruptly softened it. If the original thought matters, try coming back to it.”",
     audioWhy: "Speech recognition often removes unfinished sounds, inhales and false starts. Even a verbatim transcript doesn't always distinguish searching for a word from a moment when the person deliberately stopped and softened the original wording. What matters is the transition between the two ways of delivery.",
-    categories: ["Tone & intonation", "Breath & micro-sounds"],
+    categories: ["Tone & intonation", "Micro-sounds & backchannel"],
     authors: ["Daler Aliyorov"],
     ilyaLikes: true, eugeneLikes: false, grahamLikes: false,
     src: [
@@ -260,7 +260,7 @@ const SIGNALS = [
     description: "— You're the same as always, leaving everything to the last minute… kidding, kidding! (silence, sigh)\n— …Nick, alright. Let's get back to the release. When are we handing it off to the client?\n\nSomeone cracks an awkward joke or it gets personal — instead of pushback, there's a quick “yeah,” silence, a sigh, and an attempt to get back on agenda. Sometimes with a name attached to whoever caused the awkward moment.",
     importance: "Catches moments where the conversation went slightly off the rails and someone swallowed it instead of saying so. During the call: “Sounds like there was some tension — worth checking if everyone's okay.” In the report: hidden friction the team formally “worked around.”",
     audioWhy: "In the transcript — a polite return to business, sometimes with a name. You can't hear the silence, sigh, or strained tone between the joke and “let's get back to it.” An LLM reads facilitation, not “that bothered me, so I'm redirecting.”",
-    categories: ["Emotion & mood", "Breath & micro-sounds"],
+    categories: ["Emotion & mood", "Micro-sounds & backchannel"],
     authors: ["Daria Kochenova"],
     ilyaLikes: true, eugeneLikes: false, grahamLikes: false,
     src: [
@@ -309,7 +309,7 @@ const SIGNALS = [
     description: "Words come noticeably faster than this person's usual tempo. The reference value can be set before the meeting, or taken from the person's own norm across past calls (with a data-sufficiency flag).",
     importance: "Acceleration is a marker that the participant fears missing the moment or going unheard. The focus of attention shifts away from the real goals and the quality of the delivery drops. Can be descriptive or prescriptive — either way shown only to the speaker.",
     audioWhy: "The transcript doesn't record speaking speed.",
-    categories: ["Pace & rhythm", "Personal baseline", "Self-monitoring"],
+    categories: ["Pace & rhythm", "Personal baseline"],
     authors: ["Eugene Arutyunov", "Pauline Perevalova"],
     ilyaLikes: true, eugeneLikes: false, grahamLikes: false,
     src: [
@@ -322,7 +322,7 @@ const SIGNALS = [
     description: "A continuous turn runs longer than a threshold.",
     importance: "",
     audioWhy: "",
-    categories: ["Self-monitoring", "Turn-taking & airtime"],
+    categories: ["Turn-taking & airtime"],
     authors: ["Eugene Arutyunov"],
     ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
     src: [
@@ -334,7 +334,7 @@ const SIGNALS = [
     description: "The share of airtime over the meeting is above a threshold.",
     importance: "",
     audioWhy: "",
-    categories: ["Self-monitoring", "Turn-taking & airtime"],
+    categories: ["Turn-taking & airtime"],
     authors: ["Eugene Arutyunov"],
     ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
     src: [
@@ -342,35 +342,11 @@ const SIGNALS = [
     ]
   },
   {
-    signal: "Circling",
-    description: "Repeating what has already been said without adding anything new.",
-    importance: "",
-    audioWhy: "",
-    categories: ["Self-monitoring"],
-    authors: ["Eugene Arutyunov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Eugene Arutyunov", text: "| Ходишь по кругу | нег | повторяешь уже сказанное, не добавляя нового | ❓ | наш кастом |" }
-    ]
-  },
-  {
-    signal: "Off topic",
-    description: "Wandered too far from the topic. Open question in the source: measured from the conversation's topic, or from the stated agenda?",
-    importance: "",
-    audioWhy: "",
-    categories: ["Self-monitoring"],
-    authors: ["Eugene Arutyunov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Eugene Arutyunov", text: "| Ушёл слишком далеко от темы | нег | ❓ от темы разговора? от заявленной повестки? | ❓ | наш кастом |" }
-    ]
-  },
-  {
     signal: "Filler words",
     description: "— I think we should first, uhh… look at the quarterly numbers… and the-en… decide on the budget…\n\nFiller frequency (“well”, “like”, “anyway”) above the person's norm; fillers used to hold the floor and buy time to think while a thought isn't finished yet.",
     importance: "Lets you track who holds the floor for long stretches or is simply stalling, and more accurately identify when someone was interrupted before finishing a thought.",
     audioWhy: "Fillers are usually stripped out of text, because in writing they carry no added information. In conversation, though, they often mean floor-holding.",
-    categories: ["Self-monitoring", "Turn-taking & airtime"],
+    categories: ["Turn-taking & airtime", "Micro-sounds & backchannel"],
     authors: ["Irina Zakharova", "Eugene Arutyunov"],
     ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
     src: [
@@ -379,76 +355,15 @@ const SIGNALS = [
     ]
   },
   {
-    signal: "Unfinished thoughts",
-    description: "Dropping a thought and jumping to another without bringing it to a close.",
-    importance: "",
-    audioWhy: "",
-    categories: ["Self-monitoring"],
-    authors: ["Eugene Arutyunov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Eugene Arutyunov", text: "| 💡 Незаконченные мысли | нег | бросаешь мысль и перескакиваешь на другую, не довёл до точки | ❓ | наш кастом |" }
-    ]
-  },
-  {
-    signal: "Detail overload",
-    description: "The level of detail is excessive for the question or the audience.",
-    importance: "",
-    audioWhy: "",
-    categories: ["Self-monitoring"],
-    authors: ["Eugene Arutyunov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Eugene Arutyunov", text: "| 💡 Перегруз деталями | нег | уровень детализации избыточен для вопроса/аудитории | ❓ | наш кастом |" }
-    ]
-  },
-  {
-    signal: "Hedged statements",
-    description: "Systematic hedging (“probably”, “it seems to me”, “not sure, but”) in places where you are actually asserting something.",
-    importance: "",
-    audioWhy: "",
-    categories: ["Self-monitoring"],
-    authors: ["Eugene Arutyunov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Eugene Arutyunov", text: "| 💡 Неуверенные формулировки | нег | систематические хеджи («наверное», «мне кажется», «не уверен, но») там, где утверждаешь | ❓ | наш кастом |" }
-    ]
-  },
-  {
     signal: "Monotone delivery",
     description: "Speaking for a long time without changes of intonation or pauses.",
     importance: "",
     audioWhy: "Marked in the source as acoustics, not transcript.",
-    categories: ["Self-monitoring", "Tone & intonation", "Pace & rhythm"],
+    categories: ["Tone & intonation", "Pace & rhythm"],
     authors: ["Eugene Arutyunov"],
     ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
     src: [
       { author: "Eugene Arutyunov", text: "| 💡 Монотонность | нег | долго говоришь без смены интонации и пауз (акустика, не транскрипт) | ❓ | наш кастом |" }
-    ]
-  },
-  {
-    signal: "Closed question",
-    description: "A closed question asked where an open one would have yielded more.",
-    importance: "Hint from the source: re-ask with an open question.",
-    audioWhy: "",
-    categories: ["Self-monitoring", "Negotiation"],
-    authors: ["Eugene Arutyunov", "Ilya Sinelnikov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Eugene Arutyunov", text: "| Закрытый вопрос вместо открытого | нег | задал закрытый вопрос там, где открытый дал бы больше | ❓ | наш кастом, ✅ перенесён из [[Key Moments]] |" },
-      { author: "Ilya Sinelnikov", text: "| Закрытые вопросы | | | | Переспросить открыто |" }
-    ]
-  },
-  {
-    signal: "Closed answers",
-    description: "Closed (limited, one-line) answers from the other side.",
-    importance: "Hint from the source: re-ask with an open question.",
-    audioWhy: "",
-    categories: ["Negotiation"],
-    authors: ["Ilya Sinelnikov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Ilya Sinelnikov", text: "| Закрытые (ограниченные, неразвернутые) ответы | | | | Переспросить открыто |" }
     ]
   },
   {
@@ -506,23 +421,11 @@ const SIGNALS = [
     description: "Someone said nothing for the entire meeting. These are different silences: the person may have been backchanneling all meeting, fully engaged; they may have wanted to speak but never found a place to get a word in (toggling their mic on and off); they may not have been participating at all; or they're simply an audience member at a presentation.",
     importance: "These are all different silences requiring different responses, and it's useful to know about the quiet ones right during the meeting.",
     audioWhy: "Whoever said nothing for the entire meeting simply won't be in the transcript.",
-    categories: ["Turn-taking & airtime", "Backchannel"],
+    categories: ["Turn-taking & airtime", "Micro-sounds & backchannel"],
     authors: ["Irina Zakharova"],
     ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
     src: [
       { author: "Irina Zakharova", text: "### Someone never spoke up\n\n**Why an LLM with a transcript can't do this:** whoever said nothing for the entire meeting simply won't be in the transcript.\n\n**Why it matters**: silence in a meeting can mean different things:\n\n- the person may have been backchanneling all meeting and the notes didn't capture it, but they were fully in agreement and engaged\n- they may have wanted to say something but never found a place to get a word in (toggling their mic on and off constantly)\n- they may simply not have been participating and were doing something else in parallel\n- they may be an audience member — one person is presenting, and no one else's participation is needed\n\nThese are all different silences requiring different responses, and it's useful to know about the quiet ones right during the meeting." }
-    ]
-  },
-  {
-    signal: "Illusory agreement",
-    description: "— Okay, let's finalize: we do a quick version of the payment integration, no polish, the main thing is that it works for the investor demo. Everyone agreed?\n— Yes, makes sense. Quick it is.\n— Yep, I'm on board. No polish — that takes a lot off our plate.\n— Great, so it's decided. Let's go build it.\n\nThe PM meant live payment at the demo; one developer understood “quick version” = the provider's sandbox; the other understood “no polish” = one card, one scenario, no error handling.",
-    importance: "Unspoken expectations turn into rework, at a point when there's no time left for it.",
-    audioWhy: "By the transcript everyone understood everything — and by the audio, too, actually. This needs meeting-context analysis: a complex topic closed in 20 seconds without a single clarifying question, with three happy “yes”es, is statistically suspicious — the easier the agreement came, the more likely each person has their own understanding. (The author flags this as context-based, not audio-based — a trigger for a check.)",
-    categories: ["Agreement & commitment", "Bonus"],
-    authors: ["Irina Zakharova"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Irina Zakharova", text: "### Illusory agreement, or Nobody understood anything\n\n— Okay, let's finalize: we do a quick version of the payment integration, no polish, the main thing is that it works for the investor demo. Everyone agreed?\n\n— Yes, makes sense. Quick it is.\n\n— Yep, I'm on board. No polish — that takes a lot off our plate.\n\n— Great, so it's decided. Let's go build it.\n\n**Why an LLM with a transcript can't do this:** by the transcript everyone understood everything — and by the audio, too, actually. This needs a deeper analysis of what was said. If, for instance, a product manager and developers were talking, they may hold different understandings of the same words:\n\n- The PM meant: at the demo there will be live payment — the investor pulls out a card, pays, it goes through.\n- The first developer understood: \"quick version\" = the payment provider's test mode, sandbox. It's a demo, after all!\n- The second developer understood: \"no polish\" — one card, one scenario, no error handling — enough for a demo.\n\nThis can't be grasped from audio or from text, but it can be grasped from the meeting's context — nobody spelled out expectations or commitments. A complex topic closed in 20 seconds without a single clarifying question, with three happy \"yes\"es, is statistically suspicious: the easier the agreement came, the more likely each person has their own understanding of what was said. This can be a trigger for a check.\n\n**Why it matters**: unspoken expectations turn into rework, at a point when there's no time left for it." }
     ]
   },
   {
@@ -604,7 +507,7 @@ const SIGNALS = [
     description: "A discussion that on the words looks like a normal conversation, but the intonation shows one of the speakers is starting to seethe or that the words upset them — while on work calls people don't talk about emotions, they try to solve issues.",
     importance: "Helps track the emotional reaction to a dialogue in the moment. In the negotiation framing of the source: emotions are off the scale — time to ease the line, addressing the specific emotion (“I see, I understand, I'd be nervous too”).",
     audioWhy: "Emotions aren't always clear from text, because they aren't spoken out loud.",
-    categories: ["Emotion & mood", "Negotiation"],
+    categories: ["Emotion & mood"],
     authors: ["Nikita Nova", "Ilya Sinelnikov"],
     ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
     src: [
@@ -679,7 +582,7 @@ const SIGNALS = [
     description: "Someone drags out their talk, dives into needless detail, or runs over time — while the backchannel speeds up (“uh-huh, yeah-yeah,” as if hurrying them along) or, on the contrary, goes conspicuously silent.",
     importance: "Raises meeting efficiency.",
     audioWhy: "An LLM won't catch the accelerated backchannel (“uh-huh, yeah-yeah”) that nudges the speaker along; the opposite marker is a long silence in the backchannel. Combined with semantic analysis of the tempo and density of the narration, such a signal becomes possible.",
-    categories: ["Backchannel", "Self-monitoring"],
+    categories: ["Micro-sounds & backchannel"],
     authors: ["Pauline Perevalova"],
     ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
     src: [
@@ -691,71 +594,11 @@ const SIGNALS = [
     description: "— Yeah, who could have thought tests would catch a problem like that, right? Tests were invented as a formality anyway.",
     importance: "Usually a sign of inner disagreement, irritation, a sense of unfairness. A good negotiator won't leave it unattended — they'll ease the line, uncover the cause of the behavior, ask an extra question. Hint from the source: recognize it; clarify, ask questions.",
     audioWhy: "Can't be done fully from text — most often the behavior is expressed in the tone, not only in the specific words.",
-    categories: ["Tone & intonation", "Emotion & mood", "Negotiation"],
+    categories: ["Tone & intonation", "Emotion & mood"],
     authors: ["Ilya Sinelnikov"],
     ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
     src: [
       { author: "Ilya Sinelnikov", text: "| Passive aggressive behavior | — Да, кто бы мог подумать, что тесты выявят такую проблему, да? Тесты же для галочки придумали. | Не может полностью. Чаще всего поведение выражается в тоне, а не только в конкретных словах. | Обычно это признак внутреннего несогласия, раздражания, ощущения несправедливости. Хороший переговорщик не оставит без внимания, а потравит леску, вскроет причину поведения, задаст доп вопрос. | Распознать. Уточнить, задать вопросы |" }
-    ]
-  },
-  {
-    signal: "Potential dishonesty",
-    description: "",
-    importance: "Just knowing is valuable. Ask probing questions.",
-    audioWhy: "From the source: “Humanity and sci-fi writers have dreamed of this since antiquity. A machine that can detect lying.”",
-    categories: ["Deception & manipulation"],
-    authors: ["Ilya Sinelnikov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Ilya Sinelnikov", text: "| Potential dishonesty (вранье, обман) | | Человечество и фантсты мечтает об этом с античных времен. Машина, которая может определять ложь. | Просто знать. Задать наводящие вопросы | |" }
-    ]
-  },
-  {
-    signal: "Manipulation",
-    description: "",
-    importance: "Manipulations must not be swallowed. Hint from the source: name the manipulation out loud!",
-    audioWhy: "",
-    categories: ["Deception & manipulation", "Negotiation"],
-    authors: ["Ilya Sinelnikov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Ilya Sinelnikov", text: "| Манипуляция (в целом и конкретные) | | | Манипуляции нельзя проглотит | Проговорить манипуляцию! |" }
-    ]
-  },
-  {
-    signal: "Right to \"no\" denied",
-    description: "— We'll have a call tomorrow at 10.\n\nWorks in both directions: you deny the other person the right to say no — or they deny it to you.",
-    importance: "People are very sensitive to being denied the right to say no. Hints from the source: urgently say in plain words that the client has the right to refuse; in the other direction — actively remind that you're not sure yet, don't agree, and want to think it over (win back your right to no).",
-    audioWhy: "The source notes an LLM may catch this, but not always accurately.",
-    categories: ["Negotiation"],
-    authors: ["Ilya Sinelnikov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Ilya Sinelnikov", text: "| Ты лишаешь права на нет | — Созвонимся завтра в 10. | Может, но не всегда точно? | Люди очень чувствительны к лишению права не нет. В | Срочно прямым текстом проговорить, что у клиента есть право отказатьсятя |\n| Тебя лишают права на нет | | | | Активно напомнить, что ты пока не уверен, не согласен и хочешь подумать (отвоевать себе право на нет) |" }
-    ]
-  },
-  {
-    signal: "Neediness",
-    description: "Works in both directions: you show neediness in your speech, or the other side does.",
-    importance: "Hints from the source: adjust your speech to stress that you don't need the deal; in the other direction — help the person see they're not a slave to it, and things can be fine either way.",
-    audioWhy: "",
-    categories: ["Negotiation", "Emotion & mood"],
-    authors: ["Ilya Sinelnikov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Ilya Sinelnikov", text: "| Ты испытываешь нужду | | | | Скорректировать речь — подчеркнуть, что ты не нуждаешься |\n| Собеседник испытывает нужду | | | | Помочь увидеть, что он не раб, и нормально может быть и так |" }
-    ]
-  },
-  {
-    signal: "Out of the client's world",
-    description: "— This way is convenient for us. We want…",
-    importance: "Hint from the source: reframe your speech around “what would be useful to you.”",
-    audioWhy: "",
-    categories: ["Negotiation"],
-    authors: ["Ilya Sinelnikov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Ilya Sinelnikov", text: "| Ты не в мире клиента | — Нам удобно вот так. Мы хотим | | | Скорректировать речь в русле «А что вам полезно» |" }
     ]
   },
   {
@@ -768,30 +611,6 @@ const SIGNALS = [
     ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
     src: [
       { author: "Ilya Sinelnikov", text: "| Перебивание | | | | Не перебивай |" }
-    ]
-  },
-  {
-    signal: "Agenda missing",
-    description: "Signals that the other person doesn't know or understand the goal and plan of the conversation.",
-    importance: "Hint from the source: say the goal out loud.",
-    audioWhy: "",
-    categories: ["Negotiation"],
-    authors: ["Ilya Sinelnikov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Ilya Sinelnikov", text: "| Отсутствие повестки, сигналы, что собеседник не знает, не понимает цели и плана | | | | Напомнить вслух проговорить цель |" }
-    ]
-  },
-  {
-    signal: "Lag, not interruption",
-    description: "People have network lag — they talk over each other not because they interrupt, but because of the lag. A muted microphone can also mean something by itself; the system should know what's happening with the mics.",
-    importance: "",
-    audioWhy: "",
-    categories: ["Overlap & interruptions"],
-    authors: ["Ilya Sinelnikov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Ilya Sinelnikov", text: "+ У людей лаг, они говорят поверх не потому что перебивают, а из-за лага\nВыключенный микрофон может что-то значить:\n— сам факт может значить\n— велма должна знать, чё там с микрофонами" }
     ]
   },
   {
@@ -811,7 +630,7 @@ const SIGNALS = [
     description: "",
     importance: "",
     audioWhy: "",
-    categories: ["Deception & manipulation"],
+    categories: ["Tone & intonation"],
     authors: ["Graham Gullans"],
     ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
     src: [
@@ -823,60 +642,11 @@ const SIGNALS = [
     description: "",
     importance: "",
     audioWhy: "",
-    categories: ["Emotion & mood", "Breath & micro-sounds"],
+    categories: ["Emotion & mood", "Micro-sounds & backchannel"],
     authors: ["Graham Gullans"],
     ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
     src: [
       { author: "Graham Gullans", text: "6. Laugher - Genuine or courtesy laugher" }
-    ]
-  },
-  {
-    signal: "Cultural mismatch",
-    description: "Cultural differences in communication: in the US, “we really enjoy working with you, you're doing great” almost certainly means you're about to be fired. Per Erin Meyer, a whole separate large layer of signals like: “don't worry, American — in France it's normal to speak bluntly, you're not bad.”",
-    importance: "",
-    audioWhy: "",
-    categories: ["Bonus"],
-    authors: ["Ilya Sinelnikov", "Pauline Perevalova"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Ilya Sinelnikov", text: "учитывать культурные различия для коммуникации\nпример: в США когда тебе говорят «нам очень нравится с вами работать, вы молодцы» почти наверняка значит что тебя уволят" },
-      { author: "Pauline Perevalova", text: "- культурные различия по Эрин Мейер, это целый отдельный большой пласт сигналов типа «не переживай, американец, у них во Франции принято говорить прямо, ты не плохой»;" }
-    ]
-  },
-  {
-    signal: "Nonverbal displeasure",
-    description: "Tutting plus a loud exhale — “say in words what you don't like.”",
-    importance: "",
-    audioWhy: "",
-    categories: ["Breath & micro-sounds", "Emotion & mood", "Bonus"],
-    authors: ["Pauline Perevalova"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Pauline Perevalova", text: "- Цоканье + громкий выдох — «скажи словами че не нравится»;" }
-    ]
-  },
-  {
-    signal: "Criticism of person, not work",
-    description: "“Criticize the work or the actions, not the person.”",
-    importance: "",
-    audioWhy: "",
-    categories: ["Bonus"],
-    authors: ["Pauline Perevalova"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Pauline Perevalova", text: "- «критикуй не человека, а его работу/поступки»;" }
-    ]
-  },
-  {
-    signal: "Music practice cues",
-    description: "For music practice: a tuner for voice or instrument, detection of tempo changes, rhythm slips, and so on.",
-    importance: "",
-    audioWhy: "",
-    categories: ["Bonus"],
-    authors: ["Pauline Perevalova"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Pauline Perevalova", text: "- для занятий музыкой тюнер для голоса или для инструмента, фиксация изменения темпа, сбивки ритма и тд." }
     ]
   }
 ];

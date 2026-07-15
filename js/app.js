@@ -1,12 +1,29 @@
 /* Рендер таблицы сигналов: сортировка по клику в th, фильтры-чипы
-   по категориям и авторам, диалог с исходными фрагментами. */
+   по категориям и авторам, диалог с исходными фрагментами.
+
+   Дефолтный порядок и сквозная нумерация: по совокупному числу лайков,
+   затем по числу авторов, затем по алфавиту. */
 
 (function () {
   const tbody = document.getElementById("signals-tbody");
-  const countEl = document.getElementById("signals-count");
   const dialog = document.getElementById("src-dialog");
   const dialogTitle = document.getElementById("src-dialog-title");
   const dialogBody = document.getElementById("src-dialog-body");
+
+  const KIKI_SVG =
+    '<svg class="signals-kiki" viewBox="0 0 241.8 241.8" aria-hidden="true">' +
+    '<polygon fill="currentColor" points="18.9 93.5 84.3 85.5 53.6 21.7 135.1 75.2 207.5 20 173.4 121.7 223.1 144.9 163.3 162.5 159 221.9 121.2 156.4 18.8 208.4 72.3 121.7 18.9 93.5"/>' +
+    "</svg>";
+
+  const likesTotal = (s) =>
+    (s.ilyaLikes ? 1 : 0) + (s.eugeneLikes ? 1 : 0) + (s.grahamLikes ? 1 : 0);
+
+  SIGNALS.sort((a, b) => {
+    if (likesTotal(a) !== likesTotal(b)) return likesTotal(b) - likesTotal(a);
+    if (a.authors.length !== b.authors.length) return b.authors.length - a.authors.length;
+    return a.signal.localeCompare(b.signal);
+  });
+  SIGNALS.forEach((s, i) => (s.n = i + 1));
 
   const state = {
     categories: new Set(),
@@ -141,17 +158,28 @@
     const rows = SIGNALS.filter(matches);
     if (state.sortKey) rows.sort(compare);
 
-    countEl.textContent =
-      rows.length === SIGNALS.length
-        ? SIGNALS.length + " signals"
-        : rows.length + " of " + SIGNALS.length + " signals";
-
     tbody.textContent = "";
     rows.forEach((signal) => {
       const tr = document.createElement("tr");
+
+      const signalTd = cell("", "signals-cell-signal");
+      signalTd.innerHTML = KIKI_SVG;
+      signalTd.appendChild(document.createTextNode(signal.signal));
+
+      const descTd = cell(signal.description, "signals-cell-text");
+      const srcLine = document.createElement("div");
+      srcLine.className = "signals-src-line";
+      const srcButton = document.createElement("button");
+      srcButton.className = "signals-src-button";
+      srcButton.textContent = "src";
+      srcButton.addEventListener("click", () => openSrc(signal));
+      srcLine.appendChild(srcButton);
+      descTd.appendChild(srcLine);
+
       tr.append(
-        cell(signal.signal),
-        cell(signal.description, "signals-cell-text"),
+        cell(signal.n, "signals-table__num"),
+        signalTd,
+        descTd,
         cell(signal.importance, "signals-cell-text"),
         cell(signal.audioWhy, "signals-cell-text"),
         cell(signal.categories.join(", ")),
@@ -160,14 +188,6 @@
         cell(signal.eugeneLikes ? "+" : "", "signals-table__likes"),
         cell(signal.grahamLikes ? "+" : "", "signals-table__likes")
       );
-
-      const srcTd = document.createElement("td");
-      const srcButton = document.createElement("button");
-      srcButton.className = "signals-src-button";
-      srcButton.textContent = "src";
-      srcButton.addEventListener("click", () => openSrc(signal));
-      srcTd.appendChild(srcButton);
-      tr.appendChild(srcTd);
 
       tbody.appendChild(tr);
     });
