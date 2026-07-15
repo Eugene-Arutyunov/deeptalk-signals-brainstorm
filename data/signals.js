@@ -7,12 +7,12 @@
 const SIGNALS = [
   {
     signal: "Lost attempt to speak",
-    description: "— Then let's just ship the current version.\n— I just wanted…\n— Right, and after the release we'll look at the metrics.\n\nOne person starts speaking at the same time as another, stops, and never returns to their thought: a short inhale, a barely audible “I…”, then nothing — or the mic turning on and off with no actual speech (a careful hand-raise).",
+    description: "— Then let's just ship the current version.\n— I just wanted…\n— Right, and after the release we'll look at the metrics.\n\nOne person starts at the same time as another, stops, and never returns to their thought — or the mic turns on and off with no actual speech.",
     importance: ["Lost input rescued","Everyone gets heard"],
     audioWhy: ["Not in transcript","Needs voice separation"],
     categories: ["Turn-taking & overlap"],
     authors: ["Eugene Vlasov","Daria Kochenova","Nikita Nova","Pauline Perevalova","Eugene Arutyunov","Ilya Sinelnikov"],
-    ilyaLikes: true, eugeneLikes: false, grahamLikes: false,
+    ilyaLikes: true, eugeneLikes: true, grahamLikes: false,
     src: [
       { author: "Eugene Vlasov", text: "# 1 — Потерянная попытка высказаться\n\n## Пример\n\n— Тогда, наверное, просто выпускаем текущую версию.\n— Я хотел только…\n— Да, и после релиза уже посмотрим на метрики.\n\nОдин человек начинает говорить одновременно с другим, останавливается и больше к своей мысли не возвращается.\n\n## Почему транскрипта недостаточно\n\nКороткое «я хотел только…» может вообще не попасть в транскрипт. Даже если оно будет распознано, из текста может быть непонятно, что человек пытался войти в разговор, столкнулся с более громкой репликой и остановился.\n\nДля определения сигнала важны точные моменты начала речи, наложение голосов и то, кто продолжил говорить, а кто уступил слово.\n\n## Как это полезно\n\nСигнал помогает не потерять потенциально важную мысль и даёт ведущему возможность вернуть слово человеку, чья попытка высказаться осталась незамеченной.\n\n## Вариант сигнала\n\nИра пыталась что-то добавить, но потеряла слово. Вернись к ней.\n\nСигнал лучше показывать приватно ведущему встречи или человеку, который продолжил говорить." },
       { author: "Daria Kochenova", text: "2. Suppressed attempt to speak\n\nNick has been talking for three minutes straight. Sasha wants to jump in but doesn't want to cut him off, and Nick isn't leaving any pauses. In the audio: a short inhale, a barely audible \"I…,\" then nothing. The cue might be a sigh — or the mic turning on and off with no actual speech.\n\nPartial attempts to speak often don't show up in the transcript. Even with timestamps, it's unclear whether someone was trying to talk or if it was just noise or a cough.\n\nShows who isn't being given room. During the call: \"Sounds like someone tried to speak — ask if anyone else has thoughts.\" In the report: a pattern of who keeps getting talked over." },
@@ -24,7 +24,7 @@ const SIGNALS = [
   },
   {
     signal: "Question with no room to answer",
-    description: "— Any doubts about this decision? Great, then we launch on Monday.\n\nFormally a question was asked, but the speaker continued almost immediately, leaving no time to answer.",
+    description: "— Any doubts about this decision? Great, then we launch on Monday.\n\nA question was asked, but the speaker continued almost immediately.",
     importance: ["Speaker self-awareness","Everyone gets heard"],
     audioWhy: ["Pause length & timing"],
     categories: ["Pauses & silence","Turn-taking & overlap"],
@@ -36,7 +36,7 @@ const SIGNALS = [
   },
   {
     signal: "Objection lost",
-    description: "— So we're all agreed, launching Monday.\n— I'm against it, because…\n— Great, moving on.\n\nThe objection was quiet and overlapped by a louder line; the conversation went on as if consensus had been reached.",
+    description: "— So we're all agreed, launching Monday.\n— I'm against it, because…\n— Great, moving on.\n\nThe objection was quiet and overlapped by a louder line.",
     importance: ["Lost input rescued","Real agreement check"],
     audioWhy: ["Needs voice separation","Not in transcript"],
     categories: ["Turn-taking & overlap","Agreement & commitment"],
@@ -48,12 +48,12 @@ const SIGNALS = [
   },
   {
     signal: "Collective aha",
-    description: "After a long discussion someone says:\n— So the problem isn't the solution itself, but that we won't have time to test it?\n\n— Ahh. — Yes, exactly. — Precisely! — Now I get it.\n\nSeveral participants react almost simultaneously, then develop the same formulation.",
+    description: "— So the problem isn't the solution itself, but that we won't have time to test it?\n— Ahh. — Yes, exactly. — Precisely! — Now I get it.\n\nSeveral participants react almost simultaneously.",
     importance: ["Key moments captured"],
     audioWhy: ["Group synchrony","Not in transcript"],
     categories: ["Group dynamics"],
     authors: ["Eugene Vlasov"],
-    ilyaLikes: true, eugeneLikes: false, grahamLikes: false,
+    ilyaLikes: true, eugeneLikes: true, grahamLikes: false,
     src: [
       { author: "Eugene Vlasov", text: "# 4 — Синхронное понимание (илья +)\n\n## Пример\n\nПосле долгого обсуждения один человек говорит:\n\n— То есть проблема не в самом решении, а в том, что мы не успеем его проверить?\n\nНесколько участников почти одновременно реагируют:\n\n— А-а-а.\n— Да, точно.\n— Именно!\n— Теперь понятно.\n\nПосле этого участники начинают развивать одну и ту же формулировку и задавать более конкретные вопросы.\n\n## Почему транскрипта недостаточно\n\nСлова «да», «точно» и «понятно» сами по себе не доказывают, что группа действительно пришла к общему пониманию.\n\nВажны синхронность реакций, их интонация, скорость появления и изменение поведения группы после конкретной реплики. Короткие звуковые реакции вроде «а-а-а» также могут вообще не попасть в транскрипт.\n\n## Как это полезно\n\nСигнал помогает сохранить формулировку, которая заметно прояснила проблему сразу для нескольких участников.\n\nТакой момент можно показать в Key Moments и сохранить в отчёте как удачное объяснение или важный поворот разговора.\n\n## Вариант сигнала\n\nКажется, эта формулировка помогла группе увидеть проблему одинаково.\n\nПосле этой формулировки несколько участников одновременно отреагировали как на прояснение проблемы. Это позитивный дескриптивный сигнал, который можно показывать публично." },
     ]
@@ -65,14 +65,14 @@ const SIGNALS = [
     audioWhy: ["Needs voice separation"],
     categories: ["Turn-taking & overlap","Group dynamics"],
     authors: ["Eugene Vlasov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
+    ilyaLikes: false, eugeneLikes: true, grahamLikes: false,
     src: [
       { author: "Eugene Vlasov", text: "# 5 — Несколько человек начали отвечать одновременно\n\n## Пример\n\n— Какие риски вы видите в этом решении?\n\nСразу три участника начинают говорить. Один продолжает, двое останавливаются, и к их ответам больше не возвращаются.\n\n## Почему транскрипта недостаточно\n\nТранскриптор может сохранить только речь самого громкого участника. Короткие начала остальных ответов могут исчезнуть, быть объединены с основной репликой или отображаться как последовательные, хотя в реальности они прозвучали одновременно.\n\nДля обнаружения сигнала нужны точные моменты начала речи и разделение голосов.\n\n## Как это полезно\n\nСигнал показывает ведущему, что вопрос вызвал реакцию сразу у нескольких участников. Вместо того чтобы сохранить только самый громкий ответ, можно дать каждому возможность высказаться по очереди.\n\nОдновременная реакция не обязательно является проблемой: она также может указывать на высокую вовлечённость или важность вопроса.\n\n## Вариант сигнала\n\nНа вопрос одновременно начали отвечать несколько человек. Дай им высказаться по очереди.\n\nЭто приватный прескриптивный сигнал ведущему встречи." },
     ]
   },
   {
     signal: "Lost question",
-    description: "— Wait, why did we decide to launch this without testing?\n— Let me show the next screen.\n— Yes, let's take a look.\n\nThe question overlapped another line, and the conversation moved on without an answer.",
+    description: "— Wait, why did we decide to launch this without testing?\n— Let me show the next screen.\n— Yes, let's take a look.\n\nThe question overlapped another line and never got an answer.",
     importance: ["Lost input rescued","Hidden risks surfaced"],
     audioWhy: ["Needs voice separation","Not in transcript"],
     categories: ["Turn-taking & overlap"],
@@ -84,12 +84,12 @@ const SIGNALS = [
   },
   {
     signal: "Reluctance",
-    description: "— Can you finish this by Friday?\n(long pause, an inhale)\n— Yes. (quiet, drawn out, almost a question)\n\nOther shapes:\n— You'll do it by Wednesday? — Well… okay.\n— Who's going to handle client comms? — I'll take it. (with a sigh)\n— Will the tests pass by Thursday? — Yes, they'll pass. The main scenarios we've already… anyway, yes, they'll pass by Thursday.",
+    description: "— Can you finish this by Friday?\n(long pause, a sigh)\n— Yes. (quiet, drawn out, almost a question)",
     importance: ["Real agreement check","Hidden risks surfaced","Burnout & wellbeing"],
     audioWhy: ["Intonation, not words","Pause length & timing","Personal baseline needed"],
     categories: ["Agreement & commitment","Pauses & silence","Emotion & mood"],
     authors: ["Eugene Vlasov","Daria Kochenova","Nikita Nova","Irina Zakharova","Graham Gullans"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: true,
+    ilyaLikes: false, eugeneLikes: true, grahamLikes: true,
     src: [
       { author: "Eugene Vlasov", text: "# 7 — Неуверенный ответ на обязательство\n\n## Пример\n\n— Сможешь закончить это к пятнице?\nДолгая пауза, вдох.\n— Да.\n\nСлово «да» произносится тихо, с растянутой или вопросительной интонацией. После ответа человек ничего не добавляет.\n\n## Почему транскрипта недостаточно\n\nВ транскрипте останется уверенное и однозначное:\n\n— Да.\n\nИз текста невозможно понять, что ответу предшествовала необычно долгая пауза, а сама реплика прозвучала неуверенно. Для сигнала важны длительность ответа, интонация, громкость и изменение голоса относительно обычной речи этого участника.\n\n## Как это полезно\n\nСигнал помогает не принять формальное подтверждение за надёжное обязательство. Вместо немедленной фиксации срока можно уточнить риски или необходимую помощь.\n\n## Вариант сигнала\n\nПеред ответом была долгая пауза, а подтверждение прозвучало тише обычного. Уточни риски перед фиксацией срока.\n\nВажно не говорить:\n\nЧеловек не собирается выполнять обещание.\n\nСистема наблюдает особенности ответа, но не знает намерений человека." },
       { author: "Daria Kochenova", text: "9. Sigh before \"agreement\" (способ определения disagreement)\n\n— Who's going to handle client comms?\n— I'll take it. (with a sigh)\n\nSighs and breathing don't make it into the transcript — but in audio you hear fatigue, irritation, or resignation, not enthusiasm.\n\nOwnership showed up on paper, but the person took the task reluctantly. Risk of missed deadlines and quiet burnout. During the call: \"Make sure that's real buy-in, not just giving in.\"" },
@@ -100,7 +100,7 @@ const SIGNALS = [
   },
   {
     signal: "Participation dropped",
-    description: "At the start Kolya actively asks questions and reacts. Several of his attempts to speak get lost in overlaps; after that he stops starting lines and gives almost no short vocal reactions.\n\nAnother shape: one person spoke every 2–3 minutes for 40 minutes — and hasn't said a word in the last 15.",
+    description: "One person spoke every 2–3 minutes for 40 minutes — and hasn't said a word in the last 15, after several attempts to speak got lost in overlaps.",
     importance: ["Everyone gets heard"],
     audioWhy: ["Dynamics over time","Not in transcript"],
     categories: ["Turn-taking & overlap","Group dynamics"],
@@ -113,7 +113,7 @@ const SIGNALS = [
   },
   {
     signal: "Tension defused",
-    description: "Two participants argue, speaking faster and cutting in more and more. Then:\n— I think I get it. You're not against the solution itself — you're worried we won't have time to test it.\n— Yes, exactly.\n\nBoth speak more quietly, pauses get longer, overlaps stop.",
+    description: "Two participants argue, faster and with more cut-ins. Then:\n— I think I get it. You're not against the solution itself — you're worried we won't have time to test it.\n— Yes, exactly.\n\nBoth slow down, overlaps stop.",
     importance: ["Key moments captured","Early de-escalation"],
     audioWhy: ["Dynamics over time","Tempo & loudness"],
     categories: ["Group dynamics","Emotion & mood"],
@@ -125,7 +125,7 @@ const SIGNALS = [
   },
   {
     signal: "Backchannel faded",
-    description: "At the start of an explanation, participants react regularly:\n— Uh-huh. — Yes. — Got it.\n\nA few minutes in, the reactions disappear; the speaker keeps the same tempo, no pauses for questions.",
+    description: "At the start of an explanation, listeners react regularly:\n— Uh-huh. — Yes. — Got it.\n\nA few minutes in, the reactions disappear; the speaker keeps going.",
     importance: ["Speaker self-awareness","Meeting efficiency"],
     audioWhy: ["Not in transcript","Dynamics over time"],
     categories: ["Group dynamics"],
@@ -137,7 +137,7 @@ const SIGNALS = [
   },
   {
     signal: "Tone varies by person",
-    description: "D. answers most participants calmly and at length. When K. addresses him, answers become faster and shorter, the voice quieter or sharper — while the content stays neutral.\n\nAnother shape: with Nick — warm tone, laughter in the voice: “Nick, you're a star as always.” To Sasha's comment — flat: “Great, let's move on.”",
+    description: "With Nick — warm tone, laughter in the voice: “Nick, you're a star as always.” To Sasha's comment — shorter, flatter: “Great, let's move on.”",
     importance: ["Speaker self-awareness","Team health & safety"],
     audioWhy: ["Intonation, not words","Personal baseline needed"],
     categories: ["Tone & intonation"],
@@ -150,7 +150,7 @@ const SIGNALS = [
   },
   {
     signal: "Tension spread to the group",
-    description: "After a discussion of a missed deadline, one participant speaks louder and faster. Within minutes the others speed up too, talk simultaneously more often, leave fewer pauses — the wording stays professional.",
+    description: "One participant starts speaking louder and faster; within minutes the others speed up too, overlap more, leave fewer pauses — while the wording stays professional.",
     importance: ["Early de-escalation"],
     audioWhy: ["Group synchrony","Tempo & loudness"],
     categories: ["Group dynamics","Emotion & mood"],
@@ -162,7 +162,7 @@ const SIGNALS = [
   },
   {
     signal: "Fatigue heard",
-    description: "By the end of a long meeting the voice becomes weaker and less stable, breathing quickens, phrase endings fade, the tempo wavers — while the person speaks coherently and never says they're tired.",
+    description: "By the end of a long meeting the voice weakens, breathing quickens, phrase endings fade, the tempo wavers — while the person never says they're tired.",
     importance: ["Burnout & wellbeing"],
     audioWhy: ["Personal baseline needed","Not in transcript"],
     categories: ["Emotion & mood"],
@@ -186,19 +186,19 @@ const SIGNALS = [
   },
   {
     signal: "Accusatory question",
-    description: "— Why did you decide to release this on Friday?\n\nThe phrase can be said kindly — here it's delivered sharply, stressing “why”, with no room left for a calm explanation.",
+    description: "— Why did you decide to release this on Friday?\n\nCan be said kindly — here it's delivered sharply, stressing “why”.",
     importance: ["Speaker self-awareness","Early de-escalation"],
     audioWhy: ["Intonation, not words","Word-level stress"],
     categories: ["Tone & intonation"],
     authors: ["Daler Aliyorov"],
-    ilyaLikes: false, eugeneLikes: true, grahamLikes: false,
+    ilyaLikes: true, eugeneLikes: true, grahamLikes: false,
     src: [
       { author: "Daler Aliyorov", text: "## 5\nВопрос прозвучал как обвинение\n\nСитуация\n— Почему ты решил выпускать это в пятницу?\n\nЭту фразу можно произнести доброжелательно. Но участник задает ее резко, выделяет слово «почему» и использует интонацию, не оставляющую пространства для спокойного объяснения.\n\nПочему LLM с транскриптом не сможет так сделать\nСлова и пунктуация будут одинаковыми при любопытной, нейтральной и обвиняющей подаче. LLM может предположить намерение из контекста, но не сможет надежно определить, как вопрос фактически прозвучал для собеседника.\n\nКак это полезно\nПриватный сигнал помогает скорректировать подачу до того, как собеседник начнет защищаться: «Вопрос прозвучал жестче, чем сформулирован. Попробуй повторить его с позиции любопытства и без акцента на личной ответственности»." },
     ]
   },
   {
     signal: "Name mispronounced",
-    description: "The participant's name is dalEr, but a colleague repeatedly addresses him as Daliyar (Dilyar, dAler, etc.) — while transcription writes the correct name every time.",
+    description: "The participant's name is dalEr, but a colleague repeatedly says Daliyar (Dilyar, dAler…) — while transcription writes the correct name every time.",
     importance: ["Speaker self-awareness","Team health & safety"],
     audioWhy: ["Phonetics normalized away"],
     categories: ["Tone & intonation"],
@@ -210,12 +210,12 @@ const SIGNALS = [
   },
   {
     signal: "Collective silence",
-    description: "— Let me handle the entire release, then. (3–4 seconds — no one responds)\n\nAnother shape: a directive statement that concerns everyone — “We're postponing the launch by another three months” — followed by silence, or by no pause at all.",
+    description: "— Let me handle the entire release, then. (3–4 seconds — no one responds)",
     importance: ["Real agreement check","Everyone gets heard"],
     audioWhy: ["Pause length & timing","Not in transcript"],
     categories: ["Pauses & silence","Agreement & commitment"],
     authors: ["Daria Kochenova","Pauline Perevalova"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
+    ilyaLikes: false, eugeneLikes: true, grahamLikes: false,
     src: [
       { author: "Daria Kochenova", text: "1. Collective silence after the suggestion\n\n— \"Let me handle the entire release, then.\" (3–4 seconds — no one responds)\n\nSilence often doesn't make it into the transcript at all. Even with timestamps, it's hard to tell whether people are agreeing, shocked, pushing back, or just waiting for someone else to speak.\n\nSilence as a response: nobody wants to support the idea or challenge it. During the call: \"Everyone went quiet — worth asking how people actually feel about this.\" In the report: moments where a decision went through without a clear reaction from the team." },
       { author: "Pauline Perevalova", text: "1\nТишина как несогласие или непонимание (= повисла тишина)\n\n2\nДирективное высказывание, типа «Мы откладываем запуск ещё на три месяца», которое касается всех. После которого либо тишина, либо паузы в принципе нет и спикер идёт дальше.\n\n3\nВ транскрипте пауза исчезает, следующая реплика идёт сразу после.\n\n4\nКогда решение провозглашается, часто люди не чувствуют, что их спросили. Мы не знаем, кивали ли люди, но не помешает дать прескриптивный сигнал приватно: явно спроси, все ли согласны/поняли?" },
@@ -235,7 +235,7 @@ const SIGNALS = [
   },
   {
     signal: "Group pile-on",
-    description: "Three people talk at once for 3+ seconds — the transcript turns into a mess of fragments.\n\nA variant: two talk over each other for 3+ seconds; one stops to let the other continue.",
+    description: "Three people talk at once for 3+ seconds — the transcript turns into a mess of fragments; a variant: two overlap and one yields.",
     importance: ["Early de-escalation","Everyone gets heard"],
     audioWhy: ["Needs voice separation"],
     categories: ["Turn-taking & overlap","Group dynamics"],
@@ -252,19 +252,19 @@ const SIGNALS = [
     audioWhy: ["Intonation, not words"],
     categories: ["Tone & intonation","Emotion & mood"],
     authors: ["Daria Kochenova"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: true,
+    ilyaLikes: false, eugeneLikes: true, grahamLikes: true,
     src: [
       { author: "Daria Kochenova", text: "6. Tone mismatch\n\n— Alex, you saved us again — walk us through it! (upbeat, playful)\n— Yeah, we had a solid quarter. Let's keep going. (flat, no energy in return)\n\nIn text — praise and a reply. You can't hear that the first person was warm and playful while the second didn't match that register. An LLM won't pick up the tonal break between the two lines.\n\nCatches moments where one person reaches for connection — humor, warmth, enthusiasm — and the other doesn't meet them. During the call: \"Tone didn't quite land — check if everything's okay between you two.\" In the report: points where the exchange was fine on paper but didn't connect emotionally." },
     ]
   },
   {
     signal: "Swallowed irritation",
-    description: "— You're the same as always, leaving everything to the last minute… kidding, kidding! (silence, sigh)\n— …Nick, alright. Let's get back to the release. When are we handing it off to the client?\n\nInstead of pushback — a quick “yeah,” a sigh, and a return to the agenda.",
+    description: "— You're the same as always, leaving everything to the last minute… kidding, kidding! (silence, sigh)\n— …Nick, alright. Let's get back to the release. When are we handing it off to the client?\n\nInstead of pushback — a sigh and a return to the agenda.",
     importance: ["Team health & safety","Early de-escalation"],
     audioWhy: ["Not in transcript","Intonation, not words"],
     categories: ["Emotion & mood"],
     authors: ["Daria Kochenova"],
-    ilyaLikes: true, eugeneLikes: false, grahamLikes: false,
+    ilyaLikes: true, eugeneLikes: true, grahamLikes: false,
     src: [
       { author: "Daria Kochenova", text: "7. Conflict avoidance — swallowing irritation instead of naming it (илья +)\n\nSomeone cracks an awkward joke or it gets personal — instead of pushback, there's a quick \"yeah,\" silence, a sigh, and an attempt to get back on agenda. Sometimes with a name attached to whoever caused the awkward moment.\n\n— You're the same as always, leaving everything to the last minute… kidding, kidding! (silence, sigh)\n— …Nick, alright. Let's get back to the release. When are we handing it off to the client?\n\nIn the transcript — a polite return to business, sometimes with a name. You can't hear the silence, sigh, or strained tone between the joke and \"let's get back to it.\" An LLM reads facilitation, not \"that bothered me, so I'm redirecting.\"\n\nCatches moments where the conversation went slightly off the rails and someone swallowed it instead of saying so. During the call: \"Sounds like there was some tension — worth checking if everyone's okay.\" In the report: hidden friction the team formally \"worked around.\"" },
     ]
@@ -276,7 +276,7 @@ const SIGNALS = [
     audioWhy: ["Dynamics over time","Tempo & loudness"],
     categories: ["Emotion & mood"],
     authors: ["Daria Kochenova"],
-    ilyaLikes: true, eugeneLikes: false, grahamLikes: false,
+    ilyaLikes: true, eugeneLikes: true, grahamLikes: false,
     src: [
       { author: "Daria Kochenova", text: "8. Escalating irritation (илья +)\n\nFirst line: \"Well, I guess that works.\" Second: \"Yeah, like I already said…\" Third: \"We've been over this\" — each one shorter, sharper, louder, or edged with fatigue or annoyance.\n\nThe transcript gives you separate lines, not the tension curve or the buildup in someone's voice.\n\nCatch it before things blow up. During the call: \"Irritation seems to be building — worth pausing and rephrasing.\" In the report: where discussion tipped into friction." },
     ]
@@ -295,7 +295,7 @@ const SIGNALS = [
   },
   {
     signal: "Loaded pause",
-    description: "— Nick, do you agree with this plan? (4–6 seconds of silence)\n— Well… yeah, I guess so.\n\nAnother shape: listeners go silent during an update; the speaker reads it as misunderstanding and keeps explaining — while it may be a deliberate thinking pause.",
+    description: "— Nick, do you agree with this plan? (4–6 seconds of silence)\n— Well… yeah, I guess so.",
     importance: ["Real agreement check"],
     audioWhy: ["Pause length & timing","Not in transcript"],
     categories: ["Pauses & silence"],
@@ -308,12 +308,12 @@ const SIGNALS = [
   },
   {
     signal: "Speech sped up",
-    description: "Words come noticeably faster than this person's usual tempo — the reference is their own norm, set before the meeting or taken from past calls.",
+    description: "Words come noticeably faster than this person's usual tempo.",
     importance: ["Speaker self-awareness"],
     audioWhy: ["Tempo & loudness","Personal baseline needed"],
     categories: ["Pace & rhythm"],
     authors: ["Eugene Arutyunov","Pauline Perevalova"],
-    ilyaLikes: true, eugeneLikes: false, grahamLikes: false,
+    ilyaLikes: true, eugeneLikes: true, grahamLikes: false,
     src: [
       { author: "Pauline Perevalova", text: "1\nУскорение как страх не успеть вставить мысль. (+ илья)\n\n2\nСлова произносятся заметно быстрее обычного темпа этого человека.\n(Референсное значение можно задать самому до встречи.)\n\n3\nЛЛМ Транскрипт не фиксирует скорость произношения.\n\n4\nУскорение — маркер того, что участник боится упустить момент или оказаться неуслышанным. Фокус внимания смещается с реальных целей и качество выступления теряется. Можно дать дескриптивный сигнал, а можно и прескриптивный, но он в любом случае будет дан только выступающему." },
       { author: "Eugene Arutyunov", text: "| Говоришь слишком быстро | нег | быстрее своей нормы (нужен флаг достаточности данных) | ❓ | наш кастом |" },
@@ -338,14 +338,14 @@ const SIGNALS = [
     audioWhy: [],
     categories: ["Turn-taking & overlap"],
     authors: ["Eugene Arutyunov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
+    ilyaLikes: false, eugeneLikes: true, grahamLikes: false,
     src: [
       { author: "Eugene Arutyunov", text: "| Занимаешь слишком много эфира | нег | доля эфирного времени за встречу выше порога ❓ | ❓ | наш кастом |" },
     ]
   },
   {
     signal: "Filler words",
-    description: "— I think we should first, uhh… look at the quarterly numbers… and the-en… decide on the budget…\n\nFiller frequency above the person's norm; fillers hold the floor while a thought isn't finished.",
+    description: "— I think we should first, uhh… look at the quarterly numbers… and the-en… decide on the budget…\n\nFillers hold the floor while a thought isn't finished.",
     importance: ["Meeting efficiency"],
     audioWhy: ["Not in transcript","Personal baseline needed"],
     categories: ["Turn-taking & overlap","Pace & rhythm"],
@@ -375,7 +375,7 @@ const SIGNALS = [
     audioWhy: ["Intonation, not words"],
     categories: ["Tone & intonation","Emotion & mood"],
     authors: ["Irina Zakharova","Graham Gullans"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
+    ilyaLikes: true, eugeneLikes: true, grahamLikes: false,
     src: [
       { author: "Irina Zakharova", text: "### Detecting irony and sarcasm\n\n— I looked over your report, fixed a couple of spots, sent it to the client myself.\n\n— Well, thanks. Very helpful.\n\n**Why an LLM with a transcript can't do this:** From the text alone it isn't obvious that the second line is ironic. Depending on how it's delivered, it could be genuine gratitude or a sarcastic remark.\n\n**Why it matters**: irony and sarcasm usually point to suppressed aggression and an inability to voice dissatisfaction openly — which damages psychological safety in a team." },
       { author: "Graham Gullans", text: "5. Sarcasm" },
@@ -383,7 +383,7 @@ const SIGNALS = [
   },
   {
     signal: "Smile in the voice",
-    description: "— So, did you look at my copy?\n— I did. I'll write to you after lunch and share my comments.\n\nSaid flatly it can read as a threat; with a smile — as praise that lifts the mood.",
+    description: "— So, did you look at my copy?\n— I did. I'll write to you after lunch and share my comments.\n\nSaid flatly it reads as a threat; with a smile — as praise.",
     importance: ["Team health & safety"],
     audioWhy: ["Intonation, not words"],
     categories: ["Tone & intonation","Emotion & mood"],
@@ -395,7 +395,7 @@ const SIGNALS = [
   },
   {
     signal: "Supportive overlap",
-    description: "— Look, if we move notifications into a separate service…\n— …then the queue can go there too!\n— Yes! And then we don't touch the main monolith at all.\n— Don't touch it, exactly.\n\nAn overlap that is support and agreement, not an interruption.",
+    description: "— Look, if we move notifications into a separate service…\n— …then the queue can go there too!\n— Yes! And then we don't touch the main monolith at all.\n— Don't touch it, exactly.\n\nAn overlap that is support, not an interruption.",
     importance: ["Team health & safety"],
     audioWhy: ["Needs voice separation","Intonation, not words"],
     categories: ["Turn-taking & overlap","Group dynamics"],
@@ -407,12 +407,12 @@ const SIGNALS = [
   },
   {
     signal: "Unvoiced disagreement",
-    description: "— …and I'm pulling this neon palette in here, a brutal grotesque, everything hard, punk. Katya, as our creative copywriter, what do you say?\n— …Mm. Well, it's bold, yeah. Kind of… vivid. I mean, why not, for them it'll be unexpected. If you see it that way — there's probably something to it.\n— Exactly! That's what I'm saying — we need to be daring.\n\nAnother shape: — Okay. Let's do it this way. If you think it's the right decision, fine. (a questioning tone without a question, sarcastic)",
+    description: "— …and I'm pulling this neon palette in here, a brutal grotesque, everything hard, punk. Katya, what do you say?\n— …Mm. Well, it's bold, yeah. Kind of… vivid. If you see it that way — there's probably something to it.\n— Exactly! That's what I'm saying — we need to be daring.",
     importance: ["Real agreement check","Team health & safety"],
     audioWhy: ["Intonation, not words"],
     categories: ["Agreement & commitment","Tone & intonation"],
     authors: ["Irina Zakharova","Ilya Sinelnikov"],
-    ilyaLikes: false, eugeneLikes: true, grahamLikes: false,
+    ilyaLikes: true, eugeneLikes: true, grahamLikes: false,
     src: [
       { author: "Irina Zakharova", text: "### Unvoiced disagreement\n\n— …and I'm pulling this neon palette in here, a brutal grotesque, everything hard, punk. Katya, as our creative copywriter, what do you say?\n\n— …Mm. Well, it's bold, yeah. Kind of… vivid. I mean, why not, for them it'll be unexpected. If you see it _that way_ — there's probably something to it.\n\n— Exactly! That's what I'm saying — we need to be daring.\n\n**Why an LLM with a transcript can't do this:** the reply consists of a set of compliments that are in fact polite agreement with someone senior or higher in the hierarchy.\n\n**Why it matters**: this signal points to an inability to express disagreement with an idea, which means the team's dynamic isn't working — most likely someone is doing the work under duress, because they don't agree with the decisions made but can't do anything about it." },
       { author: "Ilya Sinelnikov", text: "| Внутреннее несогласие | — Окей. Давайте так. Если вам кажется, что это правильное решение, пусть. | Не может полностью. Порой поведение выражается в тоне, вопросительном но без вопроса. Саркатическом. Мысленным закапыванием глаз. | Трудно получить хороший результат, если собеседник не согласен с высказыванием, но не хочет (боится, стесняется) открыто это высказать | Уточнить, задать вопросы |" },
@@ -420,7 +420,7 @@ const SIGNALS = [
   },
   {
     signal: "Silent participant",
-    description: "Someone said nothing for the entire meeting. Different silences: engaged backchanneling; wanting to speak but never getting in (mic toggled on and off); not participating at all; or just being the audience at a presentation.",
+    description: "Someone said nothing for the entire meeting: engaged backchanneling, a failed attempt to get in, absence, or just the audience — different silences needing different responses.",
     importance: ["Everyone gets heard"],
     audioWhy: ["Not in transcript"],
     categories: ["Turn-taking & overlap"],
@@ -432,7 +432,7 @@ const SIGNALS = [
   },
   {
     signal: "Deviation from own norm",
-    description: "Monday, standup: “— Pasha, how's the sprint going overall? — Going fine! Finished the API, taking validation today, should be ready by Wednesday.”\nThursday, standup: “— Pasha, how's the sprint? — Going fine. Finished validation, taking reports today. Should be ready by Friday.”\n\nNearly identical words — energetic on Monday, monotone and listless by Thursday. Works only over time, against the person's own norm.",
+    description: "Monday: “— How's the sprint? — Going fine! Finished the API, ready by Wednesday.”\nThursday: “— How's the sprint? — Going fine. Finished validation. Ready by Friday.”\n\nNearly identical words — energetic on Monday, listless by Thursday.",
     importance: ["Burnout & wellbeing"],
     audioWhy: ["Personal baseline needed","Dynamics over time"],
     categories: ["Emotion & mood"],
@@ -444,7 +444,7 @@ const SIGNALS = [
   },
   {
     signal: "Group dynamic shift",
-    description: "A phrase or task changes the meeting's dynamic: a well-placed idea can bring a brainstorm to life; “has this been cleared with legal?” can kill the creative process entirely.",
+    description: "A phrase can change the meeting's dynamic: a well-placed idea brings a brainstorm to life; “has this been cleared with legal?” kills the creative process.",
     importance: ["Key moments captured"],
     audioWhy: ["Dynamics over time","Pause length & timing"],
     categories: ["Group dynamics"],
@@ -456,7 +456,7 @@ const SIGNALS = [
   },
   {
     signal: "Psychological safety level",
-    description: "Measuring psychological safety in a meeting: is it safe to disagree, is everyone's opinion asked for, did everyone speak, how are contributions and mistakes met — acceptance or ridicule.",
+    description: "Is it safe to disagree, is everyone's opinion asked for, did everyone speak, how are contributions and mistakes met.",
     importance: ["Team health & safety"],
     audioWhy: ["Intonation, not words"],
     categories: ["Group dynamics"],
@@ -468,7 +468,7 @@ const SIGNALS = [
   },
   {
     signal: "Energy shift by the end",
-    description: "It started off flat, and by the end everyone was energized — or started on a high note and everyone went home drained. Some leaders judge a meeting's success by this change.",
+    description: "Started flat and ended energized — or started high and everyone went home drained.",
     importance: ["Team health & safety"],
     audioWhy: ["Dynamics over time"],
     categories: ["Group dynamics","Emotion & mood"],
@@ -492,12 +492,12 @@ const SIGNALS = [
   },
   {
     signal: "Emphasis placement",
-    description: "“I never said she stole my money.”\n• I never said it → someone else did\n• I never said it → flat denial\n• I never said it → but I implied it\n• I never said she stole it → someone else did\n• I never said she stole it → she borrowed it, maybe\n• I never said she stole my money → it was someone else's\n• I never said she stole my money → she took something else",
+    description: "<em>I</em> never said she stole my money.\nI <em>never</em> said she stole my money.\nI never <em>said</em> she stole my money.\nI never said <em>she</em> stole my money.\nI never said she <em>stole</em> my money.\nI never said she stole <em>my</em> money.\nI never said she stole my <em>money</em>.",
     importance: ["Key moments captured"],
     audioWhy: ["Word-level stress"],
     categories: ["Tone & intonation"],
-    authors: ["Graham Gullans","Nikita Nova","Pauline Perevalova"],
-    ilyaLikes: false, eugeneLikes: true, grahamLikes: true,
+    authors: ["Graham Gullans","Nikita Nova","Pauline Perevalova","Eugene Arutyunov"],
+    ilyaLikes: true, eugeneLikes: true, grahamLikes: true,
     src: [
       { author: "Graham Gullans", text: "7.\nEmphasis / stress placement — the \"same seven words, seven meanings\" signal** (new) — this is your knockout demo. Hold the transcript _completely_ constant and change only which word is stressed:\n_\"I never said she stole my money.\"_\n\n- **I** never said it → someone else did\n- I **never** said it → flat denial\n- I never **said** it → but I implied it\n- I never said **she** stole it → someone else did\n- I never said she **stole** it → she borrowed it, maybe\n- I never said she stole **my** money → it was someone else's\n- I never said she stole my **money** → she took something else" },
       { author: "Nikita Nova", text: "### Акцентное слово\n— На этой неделе немного работы: закрываем проект А, созвон по проекту Б, по документам надо договориться про В и *начать* делать прототип для Д.\n\nВ транскрипции это будет выглядеть как перечисление проектов, но на записи будет очевидно что проект Д самый важный. Это может стать пометкой «это важно, Женя хочет акцентировать на этом внимание»\n\nПомогает лучше понимать намерение говорящего. Снижает вероятность ответить не на ту часть вопроса. Подсвечивает, какое слово было ключевым." },
@@ -506,7 +506,7 @@ const SIGNALS = [
   },
   {
     signal: "Emotion spike",
-    description: "On the words it looks like a normal conversation, but the intonation shows one speaker is starting to seethe or is upset — while on work calls people don't talk about emotions, they try to solve issues.",
+    description: "On the words it's a normal conversation, but the intonation shows one speaker is starting to seethe.",
     importance: ["Early de-escalation"],
     audioWhy: ["Intonation, not words"],
     categories: ["Emotion & mood"],
@@ -518,33 +518,20 @@ const SIGNALS = [
     ]
   },
   {
-    signal: "Confidence heard",
-    description: "Nikita spoke quickly about the project's timeline and stages, but slowed down and added interjections when the money came up — she isn't sure about the project's cost.",
-    importance: ["Hidden risks surfaced"],
-    audioWhy: ["Tempo & loudness","Not in transcript"],
-    categories: ["Pace & rhythm","Emotion & mood"],
-    authors: ["Nikita Nova","Graham Gullans"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Nikita Nova", text: "### Уверенность в информации\nСкорость речи может быть индикатором уверенности в информации. Например, про сроки и этапы проекта Никита говорила быстро, но когда речь зашла про деньги она говорила медленнее и добавила больше междометий — она не уверена в стоимости проекта.\n\nВ транскрипт это будет выглядеть как прямой текст: паузы и междометия убираются.\n\nМожно понять какие темы понятны, а какие надо обсудить ещё раз или предложить обсудить потом." },
-      { author: "Graham Gullans", text: "1. Signal of confidence" },
-    ]
-  },
-  {
     signal: "Request or order",
     description: "— Can you do this today?",
     importance: ["Hidden risks surfaced"],
     audioWhy: ["Intonation, not words"],
     categories: ["Tone & intonation"],
     authors: ["Nikita Nova"],
-    ilyaLikes: true, eugeneLikes: false, grahamLikes: false,
+    ilyaLikes: true, eugeneLikes: true, grahamLikes: false,
     src: [
       { author: "Nikita Nova", text: "### Просьба вс. Приказ  (+ илья)\n— Ты сможешь это сделать сегодня?\n\nВ тексте это может выглядеть и как приказ и как просьба, без интонации не понятна степень важности.\n\nСнижает риск неправильно интерпретировать поручение и не заруинить задачу." },
     ]
   },
   {
     signal: "Enthusiastic yes",
-    description: "In the transcription the words become:\n— Yes, that's a good idea.\n\nWhile in the conversation it may have been:\n— YESSS! that's a GOOD idea",
+    description: "In the transcription:\n— Yes, that's a good idea.\n\nIn the conversation:\n— YESSS! that's a GOOD idea",
     importance: ["Real agreement check"],
     audioWhy: ["Tempo & loudness","Intonation, not words"],
     categories: ["Agreement & commitment","Emotion & mood"],
@@ -568,7 +555,7 @@ const SIGNALS = [
   },
   {
     signal: "Confusion",
-    description: "— When can we finish this task?\n— By the end of the week.\n\nA long pause before the answer and an intonation that make clear “end of the week” is not a firm answer.",
+    description: "— When can we finish this task?\n— By the end of the week.\n\nA long pause and an intonation that say it's not a firm answer.",
     importance: ["Hidden risks surfaced"],
     audioWhy: ["Pause length & timing","Intonation, not words"],
     categories: ["Pauses & silence","Emotion & mood"],
@@ -581,7 +568,7 @@ const SIGNALS = [
   },
   {
     signal: "Audience impatience",
-    description: "A talk drags on, dives into needless detail, or runs over time — while the backchannel speeds up (“uh-huh, yeah-yeah,” hurrying the speaker along) or goes conspicuously silent.",
+    description: "A talk drags on — while the backchannel speeds up (“uh-huh, yeah-yeah,” hurrying the speaker along) or goes conspicuously silent.",
     importance: ["Meeting efficiency"],
     audioWhy: ["Not in transcript","Dynamics over time"],
     categories: ["Group dynamics"],
@@ -589,18 +576,6 @@ const SIGNALS = [
     ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
     src: [
       { author: "Pauline Perevalova", text: "1\n«Пора заканчивать»\n\n2\nЧеловек затягивает своё выступление, вдаётся в лишние детали или не укладывается по времени\n\n3\nЛЛМ не сможет уловить ускоренный бэкченнел (угу, ага-ага), который как бы поторапливает. А ещё маркером будет наоборот длительная тишина в бэкченнеле. Вкупе со смысловым анализом темпа и плотности повествования можно выдать такой сигнал\n\n4\nПовышает эффективность" },
-    ]
-  },
-  {
-    signal: "Passive-aggressive behavior",
-    description: "— Yeah, who could have thought tests would catch a problem like that, right? Tests were invented as a formality anyway.",
-    importance: ["Team health & safety","Early de-escalation"],
-    audioWhy: ["Intonation, not words"],
-    categories: ["Tone & intonation","Emotion & mood"],
-    authors: ["Ilya Sinelnikov"],
-    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
-    src: [
-      { author: "Ilya Sinelnikov", text: "| Passive aggressive behavior | — Да, кто бы мог подумать, что тесты выявят такую проблему, да? Тесты же для галочки придумали. | Не может полностью. Чаще всего поведение выражается в тоне, а не только в конкретных словах. | Обычно это признак внутреннего несогласия, раздражания, ощущения несправедливости. Хороший переговорщик не оставит без внимания, а потравит леску, вскроет причину поведения, задаст доп вопрос. | Распознать. Уточнить, задать вопросы |" },
     ]
   },
   {

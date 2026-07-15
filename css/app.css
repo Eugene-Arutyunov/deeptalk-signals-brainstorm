@@ -130,6 +130,13 @@
 
 .signals-cell-text {
   white-space: pre-line;
+
+  /* Смысловое ударение (Emphasis placement): курсива у InterVariable нет
+     (font-synthesis: none в ресете), поэтому вес */
+  & em {
+    font-style: normal;
+    font-weight: 700;
+  }
 }
 
 .signals-src-line {

@@ -180,7 +180,9 @@
       signalTd.innerHTML = KIKI_SVG;
       signalTd.appendChild(document.createTextNode(signal.signal));
 
-      const descTd = cell(signal.description, "signals-cell-text");
+      const descTd = cell("", "signals-cell-text");
+      /* innerHTML — ради <em> в Emphasis placement; html-спецсимволов в данных нет */
+      descTd.innerHTML = signal.description;
       const srcLine = document.createElement("div");
       srcLine.className = "signals-src-line";
       const srcButton = document.createElement("button");
@@ -198,9 +200,9 @@
         tagsCell(signal.audioWhy),
         tagsCell(signal.categories),
         tagsCell(signal.authors),
-        cell(signal.ilyaLikes ? "+" : "", "signals-table__likes"),
-        cell(signal.eugeneLikes ? "+" : "", "signals-table__likes"),
-        cell(signal.grahamLikes ? "+" : "", "signals-table__likes")
+        cell(signal.ilyaLikes ? "I" : "", "signals-table__likes"),
+        cell(signal.eugeneLikes ? "E" : "", "signals-table__likes"),
+        cell(signal.grahamLikes ? "G" : "", "signals-table__likes")
       );
 
       tbody.appendChild(tr);
