@@ -146,6 +146,20 @@
     return td;
   }
 
+  function tagsCell(values) {
+    const td = document.createElement("td");
+    const wrap = document.createElement("div");
+    wrap.className = "signals-tags";
+    values.forEach((value) => {
+      const tag = document.createElement("span");
+      tag.className = "signals-tag";
+      tag.textContent = value;
+      wrap.appendChild(tag);
+    });
+    td.appendChild(wrap);
+    return td;
+  }
+
   function render() {
     updateChips("filter-categories", state.categories);
     updateChips("filter-authors", state.authors);
@@ -180,10 +194,10 @@
         cell(signal.n, "signals-table__num"),
         signalTd,
         descTd,
-        cell(signal.importance, "signals-cell-text"),
-        cell(signal.audioWhy, "signals-cell-text"),
-        cell(signal.categories.join(", ")),
-        cell(signal.authors.join(", ")),
+        tagsCell(signal.importance),
+        tagsCell(signal.audioWhy),
+        tagsCell(signal.categories),
+        tagsCell(signal.authors),
         cell(signal.ilyaLikes ? "+" : "", "signals-table__likes"),
         cell(signal.eugeneLikes ? "+" : "", "signals-table__likes"),
         cell(signal.grahamLikes ? "+" : "", "signals-table__likes")

@@ -3,12 +3,7 @@
 
 .ids h1.XS {
   margin-top: 0;
-  margin-bottom: 0.2em;
-}
-
-.notes-link {
-  font-size: 0.68em;
-  margin-bottom: calc(var(--ids__density) * 1.2em);
+  margin-bottom: 0.6em;
 }
 
 /* Фильтры — в потоке над таблицей, не стикаются */
@@ -52,14 +47,6 @@
 .signals-table {
   width: 100%;
   font-size: 0.68em;
-  background-color: var(--ids__background);
-
-  & th {
-    /* Явный фон и паддинг сверху, чтобы в застиканном состоянии
-       контент не просвечивал над ячейками */
-    background-color: var(--ids__background);
-    padding-top: 0.6em;
-  }
 
   & th[data-sort] {
     cursor: pointer;
@@ -107,12 +94,38 @@
   }
 }
 
+/* Явный непрозрачный фон и z-index у застиканного th.
+   Специфичность не ниже ids-ного `.ids table tr th { background-color: inherit }`,
+   иначе фон остаётся прозрачным (цепочка inherit упирается в прозрачный враппер).
+   z-index — чтобы transform у кики-иконки не всплывал над шапкой. */
+.ids .signals-table thead th {
+  background-color: var(--ids__background);
+  z-index: 1;
+  padding-top: 0.6em;
+}
+
 .signals-kiki {
   width: 0.9em;
   height: 0.9em;
   display: inline-block;
   vertical-align: -0.08em;
-  margin-right: 0.35em;
+  margin-right: 0.18em;
+  transform: scale(1.2); /* равномерно крупнее от центра, бокс не растёт */
+}
+
+/* Теги в ячейках: переносится только пилюля целиком */
+
+.signals-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em;
+}
+
+.signals-tag {
+  white-space: nowrap;
+  border: var(--ids__border-width-s) solid var(--ids__border);
+  border-radius: var(--ids__radius-pill);
+  padding: 0 0.55em 0.1em;
 }
 
 .signals-cell-text {
