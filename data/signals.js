@@ -191,7 +191,7 @@ const SIGNALS = [
     audioWhy: ["Intonation, not words","Word-level stress"],
     categories: ["Tone & intonation"],
     authors: ["Daler Aliyorov"],
-    ilyaLikes: true, eugeneLikes: true, grahamLikes: false,
+    ilyaLikes: true, eugeneLikes: true, grahamLikes: true,
     src: [
       { author: "Daler Aliyorov", text: "## 5\nВопрос прозвучал как обвинение\n\nСитуация\n— Почему ты решил выпускать это в пятницу?\n\nЭту фразу можно произнести доброжелательно. Но участник задает ее резко, выделяет слово «почему» и использует интонацию, не оставляющую пространства для спокойного объяснения.\n\nПочему LLM с транскриптом не сможет так сделать\nСлова и пунктуация будут одинаковыми при любопытной, нейтральной и обвиняющей подаче. LLM может предположить намерение из контекста, но не сможет надежно определить, как вопрос фактически прозвучал для собеседника.\n\nКак это полезно\nПриватный сигнал помогает скорректировать подачу до того, как собеседник начнет защищаться: «Вопрос прозвучал жестче, чем сформулирован. Попробуй повторить его с позиции любопытства и без акцента на личной ответственности»." },
     ]
@@ -375,7 +375,7 @@ const SIGNALS = [
     audioWhy: ["Intonation, not words"],
     categories: ["Tone & intonation","Emotion & mood"],
     authors: ["Irina Zakharova","Graham Gullans"],
-    ilyaLikes: true, eugeneLikes: true, grahamLikes: false,
+    ilyaLikes: true, eugeneLikes: true, grahamLikes: true,
     src: [
       { author: "Irina Zakharova", text: "### Detecting irony and sarcasm\n\n— I looked over your report, fixed a couple of spots, sent it to the client myself.\n\n— Well, thanks. Very helpful.\n\n**Why an LLM with a transcript can't do this:** From the text alone it isn't obvious that the second line is ironic. Depending on how it's delivered, it could be genuine gratitude or a sarcastic remark.\n\n**Why it matters**: irony and sarcasm usually point to suppressed aggression and an inability to voice dissatisfaction openly — which damages psychological safety in a team." },
       { author: "Graham Gullans", text: "5. Sarcasm" },
@@ -524,7 +524,7 @@ const SIGNALS = [
     audioWhy: ["Intonation, not words"],
     categories: ["Tone & intonation"],
     authors: ["Nikita Nova"],
-    ilyaLikes: true, eugeneLikes: true, grahamLikes: false,
+    ilyaLikes: true, eugeneLikes: true, grahamLikes: true,
     src: [
       { author: "Nikita Nova", text: "### Просьба вс. Приказ  (+ илья)\n— Ты сможешь это сделать сегодня?\n\nВ тексте это может выглядеть и как приказ и как просьба, без интонации не понятна степень важности.\n\nСнижает риск неправильно интерпретировать поручение и не заруинить задачу." },
     ]
