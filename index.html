@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>deeptalk-signals-brainstorm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("ids-theme");
+          if (saved === "dark" || (!saved && matchMedia("(prefers-color-scheme: dark)").matches)) {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="css/tokens/palette.css" />
+    <link rel="stylesheet" href="css/tokens/colors.css" />
+    <link rel="stylesheet" href="css/tokens/scales.css" />
+    <link rel="stylesheet" href="css/settings.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/page-composition/layout.css" />
+    <link rel="stylesheet" href="css/components/ids.css" />
+    <link rel="stylesheet" href="css/components/theme-toggle.css" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body class="ids">
+    <main>
+      <div class="ids__wrapper XL">
+        <div class="ids__space M"></div>
+        <h1 class="XS">deeptalk-signals-brainstorm</h1>
+
+        <div class="signals-filters">
+          <div class="signals-filters__group" id="filter-categories">
+            <span class="signals-filters__label">Category</span>
+          </div>
+          <div class="signals-filters__group" id="filter-authors">
+            <span class="signals-filters__label">Author</span>
+          </div>
+          <p class="signals-count" id="signals-count"></p>
+        </div>
+
+        <table class="signals-table" id="signals-table">
+          <thead>
+            <tr>
+              <th data-sort="signal">Signal</th>
+              <th data-sort="description">Description</th>
+              <th data-sort="importance">Importance</th>
+              <th data-sort="audioWhy">STT + LLM can't do it</th>
+              <th data-sort="categories">Category</th>
+              <th data-sort="authors">Author</th>
+              <th data-sort="ilyaLikes" class="signals-table__likes">Ilya likes</th>
+              <th data-sort="eugeneLikes" class="signals-table__likes">Eugene likes</th>
+              <th data-sort="grahamLikes" class="signals-table__likes">Graham likes</th>
+              <th class="signals-table__src">src</th>
+            </tr>
+          </thead>
+          <tbody id="signals-tbody"></tbody>
+        </table>
+        <div class="ids__space L"></div>
+      </div>
+    </main>
+
+    <dialog class="src-dialog" id="src-dialog">
+      <div class="src-dialog__head">
+        <h2 class="src-dialog__title" id="src-dialog-title"></h2>
+        <button class="src-dialog__close" id="src-dialog-close" aria-label="Close">✕</button>
+      </div>
+      <div id="src-dialog-body"></div>
+    </dialog>
+
+    <button class="ids__theme-toggle" role="switch" aria-checked="false" aria-label="Dark theme">
+      <span class="ids__theme-toggle__track"><span class="ids__theme-toggle__thumb"></span></span>
+    </button>
+
+    <script src="data/signals.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/theme-toggle.js"></script>
+  </body>
+</html>
