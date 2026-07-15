@@ -68,15 +68,10 @@
 
   & th,
   & td {
-    &:nth-child(6),
-    &:nth-child(7) {
+    &:nth-child(5),
+    &:nth-child(6) {
       min-width: 7em;
     }
-  }
-
-  & .signals-table__num {
-    min-width: 1.8em;
-    color: var(--ids__text-caption);
   }
 
   & .signals-cell-signal {

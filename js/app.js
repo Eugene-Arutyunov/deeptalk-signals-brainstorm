@@ -23,7 +23,6 @@
     if (a.authors.length !== b.authors.length) return b.authors.length - a.authors.length;
     return a.signal.localeCompare(b.signal);
   });
-  SIGNALS.forEach((s, i) => (s.n = i + 1));
 
   const state = {
     categories: new Set(),
@@ -193,7 +192,6 @@
       descTd.appendChild(srcLine);
 
       tr.append(
-        cell(signal.n, "signals-table__num"),
         signalTd,
         descTd,
         tagsCell(signal.importance),
