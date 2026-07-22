@@ -602,4 +602,100 @@ const SIGNALS = [
       { author: "Graham Gullans", text: "6. Laugher - Genuine or courtesy laugher" },
     ]
   },
+  {
+    signal: "Interruption absolved",
+    description: "— …so I think the rollout should—\n— Can I add something about the rollout?\n\nOn Sasha's side, Eugene had been silent for over a second: her lag turned his 400 ms pause into a natural turn-gap. Nobody interrupted anyone — each listener hears their own timeline of the call.",
+    importance: ["Early de-escalation","Team health & safety"],
+    audioWhy: ["Channel, not content","Pause length & timing"],
+    categories: ["Turn-taking & overlap","Channel & environment"],
+    authors: ["Fable Five"],
+    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
+    src: [
+      { author: "Fable Five", text: "# Interruption absolved\n\n## Example\n\nEugene pauses mid-sentence to pick a word — 400 ms. Sasha's connection adds ~700 ms of delay, so on her side the silence has already stretched past a natural turn-gap, and she politely starts talking. Eugene hears her barge in mid-word.\n\n— …so I think the rollout should—\n— Can I add something about the rollout?\n\nBoth are behaving politely. The \"interruption\" exists only in Eugene's timeline.\n\n## Why the transcript isn't enough\n\nA transcript — even a perfectly diarized one — has a single global timeline. But on a real call there is no single shared conversation: every participant hears every other participant at a different moment, shifted by their own network delay. What was a rude overlap in your playback was a respectful entry in theirs. Only the call platform knows each listener's actual audio arrival times, so only it can reconstruct who heard what, when. No amount of LLM reasoning over one shared recording can recover per-listener timelines — the information isn't in the recording at all.\n\n## How it's useful\n\nIt absolves people — and Deeptalk itself — from false interruption verdicts: before any overlap signal fires, check whether lag explains it. Privately to Eugene: \"Sasha didn't interrupt — on her side you'd been silent for over a second.\" Prescriptively to a laggy pair: \"You two have ~900 ms between you; leave a longer beat before replying.\" This removes a whole class of resentment that is actually network physics, and keeps every other turn-taking signal in this table honest.\n\n(The seed of this is in Ilya's loose notes — \"people overlap because of lag, not rudeness\". This signal turns that observation into per-listener timeline reconstruction.)" },
+    ]
+  },
+  {
+    signal: "Read, not said",
+    description: "— Are you actually comfortable with the new scope?\n— Yes — I believe the revised scope reflects our shared priorities and positions us well for the next quarter.\n\nDelivered in even, level phrases with zero hesitations: the answer was read off the screen, not thought.",
+    importance: ["Real agreement check","Hidden risks surfaced"],
+    audioWhy: ["Intonation, not words","Tempo & loudness"],
+    categories: ["Pace & rhythm","Tone & intonation"],
+    authors: ["Fable Five"],
+    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
+    src: [
+      { author: "Fable Five", text: "# Read, not said\n\n## Example\n\n— Are you actually comfortable with the new scope?\n— (a beat; then, in even, level phrases with no hesitation) Yes — I believe the revised scope reflects our shared priorities and positions us well for the next quarter.\n\nThe answer was read off the screen: a prepared note, or an LLM's suggestion delivered as one's own live opinion.\n\n## Why the transcript isn't enough\n\nRead-aloud speech has a well-studied prosodic signature: flatter and more regular pitch declination, uniform tempo, list-like phrase boundaries, and almost no fillers, self-repairs or word searches. Spontaneous speech is full of micro-repairs. The words can be identical — the difference lives entirely in the delivery, which the transcript discards.\n\n## How it's useful\n\nWhen a commitment, an apology or a \"personal opinion\" arrives with reading prosody, it deserves one live follow-up question — the answer to that can't be pre-written. Privately: \"That sounded read. If it's a doc, share it; if it's your position, say it in your own words.\" In the report: which parts of the meeting were live thinking and which were performance. With an LLM in every second browser tab, \"is this person thinking right now?\" has become a real question — and it's answerable only from audio." },
+    ]
+  },
+  {
+    signal: "Pause rhythm mismatch",
+    description: "Kolya thinks in 1.5-second pauses; the group's turn-gap is 0.4 s. Every pause of his reads as “done”, the floor keeps slipping away mid-thought — and the transcript shows him “constantly interrupted” by people who were never rude.",
+    importance: ["Everyone gets heard","Team health & safety"],
+    audioWhy: ["Pause length & timing","Personal baseline needed"],
+    categories: ["Turn-taking & overlap","Pauses & silence"],
+    authors: ["Fable Five"],
+    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
+    src: [
+      { author: "Fable Five", text: "# Pause rhythm mismatch\n\n## Example\n\nKolya thinks in long pauses — a second and a half mid-sentence while he chooses a word (he's also speaking his second language). The rest of the team's average gap between turns is 0.4 seconds. Every time Kolya pauses, someone sincerely believes he's finished and takes the floor.\n\nThe transcript shows Kolya \"constantly interrupted\". In reality nobody is rude: his thinking pauses are simply longer than the group's turn-taking gap, so his turns keep ending before his thoughts do.\n\n## Why the transcript isn't enough\n\nThis needs each person's baseline distribution of intra-turn pauses, plus the pitch cues that distinguish \"not finished\" (level or rising, mid-declination) from \"done\" (final fall), plus the group's gap statistics. None of that survives into text — a transcript-LLM only sees that the turn changed, not that it changed too early for this particular speaker's rhythm.\n\n## How it's useful\n\nIt reframes chronic \"interruptions\" as a rhythm mismatch that can be fixed without blaming anyone. Privately, to whoever re-enters fastest: \"Kolya's thinking pauses are longer than the room's gap — give him one extra beat.\" Especially valuable for non-native speakers and cross-cultural teams, where pause norms genuinely differ and the difference gets systematically misread as rudeness on one side or as having nothing to say on the other." },
+    ]
+  },
+  {
+    signal: "Mic quality bias",
+    description: "Ira proposes an idea through a clipping, echoing mic — lukewarm “mm, could work”. Michael restates it on a good mic — “great idea!” Identical content is judged less credible when the audio is worse.",
+    importance: ["Everyone gets heard","Hidden risks surfaced"],
+    audioWhy: ["Channel, not content"],
+    categories: ["Channel & environment","Group dynamics"],
+    authors: ["Fable Five"],
+    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
+    src: [
+      { author: "Fable Five", text: "# Mic quality bias\n\n## Example\n\nIra proposes an idea through a clipping laptop mic with echo; the room answers with a lukewarm \"mm, could work\". Twenty minutes later Michael restates the same idea on a good microphone — \"that's a great idea\". Nobody is being political: listeners genuinely discounted the first version, because they literally heard it worse.\n\n## Why the transcript isn't enough\n\nThe transcript flattens everyone into equally clean text, erasing the fact that participants heard Ira through a degraded channel. There is experimental evidence (Newman & Schwarz, 2018) that identical content is judged less credible — and its speaker less intelligent — when audio quality is poor. The bias lives entirely in the channel, not in the words, so a transcript-LLM can't even see that it happened.\n\n## How it's useful\n\nPrivately: \"Your audio degraded during the call — echo and clipping — and poor audio measurably discounts what you say. Worth fixing before the next important call.\" At report level: whether someone's ideas systematically land worse through a bad channel, so a lead can consciously re-raise them. It's the cheapest fairness fix that exists: no behavior change required, just a microphone." },
+    ]
+  },
+  {
+    signal: "Decision sounds like a question",
+    description: "— Okay, so… we ship on Friday? (rising contour, trailing off)\n\nThe summary logs “Decision: ship Friday”. Half the team never heard a decision happen.",
+    importance: ["Real agreement check","Meeting efficiency"],
+    audioWhy: ["Intonation, not words"],
+    categories: ["Agreement & commitment","Tone & intonation"],
+    authors: ["Fable Five"],
+    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
+    src: [
+      { author: "Fable Five", text: "# Decision sounds like a question\n\n## Example\n\n— Okay, so… we ship on Friday? (rising contour, trailing off)\n— (a couple of \"mm\" sounds)\n\nThe meeting summary says: \"Decision: ship Friday.\" Half the team left the call not knowing anything was decided — because acoustically, nothing was.\n\n## Why the transcript isn't enough\n\n\"We ship Friday.\" and \"We ship Friday?\" are the same words; transcript punctuation is a guess, and a summarizing LLM happily promotes a tentative trial balloon into a committed decision. Whether the room heard a commitment or an open option exists only in the terminal contour — and in whether anyone's response actually closed it.\n\n## How it's useful\n\nThis is an acoustic mechanism behind \"54% of people leave meetings with no clear next steps\". Privately, in the moment: \"That decision sounded like a question — confirm it explicitly.\" In the report: decisions ranked by how decided they actually sounded, so tentative ones stop masquerading as commitments. The mirror of Reluctance: there the listener commits tentatively; here the decider decides tentatively, and nobody registers a decision at all." },
+    ]
+  },
+  {
+    signal: "The mm-hm dictionary",
+    description: "Three “mm-hm”s in the transcript: one falling, right at a clause boundary — agreement; one slightly rising — doubt; one flat, landing mid-word, off the rhythm of the speech — autopilot.",
+    importance: ["Real agreement check"],
+    audioWhy: ["Intonation, not words","Not in transcript"],
+    categories: ["Agreement & commitment","Group dynamics"],
+    authors: ["Fable Five"],
+    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
+    src: [
+      { author: "Fable Five", text: "# The mm-hm dictionary\n\n## Example\n\nDuring Eugene's proposal, three \"mm-hm\"s from three listeners. Dasha's falls confidently, right at his clause boundary — agreement. Nikita's rises slightly — \"m-hm?\" — doubt asking to be noticed. Michael's is flat and lands mid-word, off the rhythm of the speech — autopilot: attentive listeners backchannel at phrase boundaries, distracted ones at random.\n\nThe transcript, if it keeps them at all: \"mm-hm\", \"mm-hm\", \"mm-hm\".\n\n## Why the transcript isn't enough\n\nOne orthographic token collapses opposite meanings. The contour is gone, and — critically — so is the timing relative to the speaker's phrase structure, which is what separates listening from pretending to listen.\n\n## How it's useful\n\nBackchannels are the raw material of half the signals in this table — agreement, engagement, attention. Decoding them makes all of those signals truthful instead of nominal. Live, privately: \"Two of the three yes-sounds after your proposal carried doubt — check.\" Or: \"The agreement you're hearing may be on autopilot.\"" },
+    ]
+  },
+  {
+    signal: "Invisible de-escalator",
+    description: "Whenever two voices speed up and rise, it's Masha's next turn that comes in slower, lower, warmer — and the room follows her down. A month of this glue-work is invisible in any transcript.",
+    importance: ["Team health & safety","Burnout & wellbeing"],
+    audioWhy: ["Group synchrony","Dynamics over time"],
+    categories: ["Group dynamics","Emotion & mood"],
+    authors: ["Fable Five"],
+    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
+    src: [
+      { author: "Fable Five", text: "# Invisible de-escalator\n\n## Example\n\nWhenever pitch and tempo start climbing between two colleagues, it's Masha's next turn that comes in slower, a bit lower, warmer — and the room's acoustics follow her down. Her words are unremarkable: \"Okay — let's look at the options.\" A month of retro transcripts credits her with nothing. Deeptalk's weekly rollup shows she quietly de-escalated fourteen discussions — and that she is the only person on the team who does this.\n\n## Why the transcript isn't enough\n\nDe-escalation here isn't rhetorical, it's acoustic: resetting the room's tempo and pitch. Detecting it means measuring the group's acoustic trajectory before and after a person's turns, aggregated across meetings. In text, the pivotal turns look like filler — that's exactly why this work goes unnoticed.\n\n## How it's useful\n\nIt makes a classic piece of invisible work visible and creditable: the emotional labor that keeps a team functional. It's also an early warning — if one person absorbs all of the team's tension, the team has a single point of failure, and that person has a burnout risk nobody is tracking. This is rollup material rather than a live nudge: a signal about a person across meetings, not about a moment." },
+    ]
+  },
+  {
+    signal: "Muted words rescued",
+    description: "— That estimate is off by half… (said into a muted mic, never unmuted)\n\nAudio that never reached the call at all — only the local client, opt-in, can privately offer: “want to say it now?”",
+    importance: ["Lost input rescued"],
+    audioWhy: ["Channel, not content","Not in transcript"],
+    categories: ["Channel & environment","Turn-taking & overlap"],
+    authors: ["Fable Five"],
+    ilyaLikes: false, eugeneLikes: false, grahamLikes: false,
+    src: [
+      { author: "Fable Five", text: "# Muted words rescued\n\n## Example\n\nDuring a heated estimate discussion Sasha says, at her screen: \"that estimate is off by half\" — into a muted microphone. By the time she would have unmuted, the moment is gone. Deeptalk's local client — the audio never leaves her machine — privately offers: \"You said something while muted. The topic is still open — want to say it now?\"\n\n## Why the transcript isn't enough\n\nThis audio doesn't merely fail to reach the transcript — it never reaches the call at all. No recording contains it, so no model reading the recording could ever know it happened. Only local, on-device listening with the speaker's explicit consent can catch it, which makes it the purest possible case of \"impossible from the transcript\".\n\n## How it's useful\n\nMute is where second thoughts go to die: half-formed objections, corrections, jokes. A private nudge rescues the ones their author actually wanted to say — and stays a nudge: nothing is transmitted or stored, and the choice to speak remains entirely the speaker's. A sibling of Lost attempt to speak, one layer deeper: not a lost attempt to enter the conversation, but words that never even entered the room.\n\n(Privacy-sensitive by design: strictly opt-in, processed on-device only.)" },
+    ]
+  },
 ];
