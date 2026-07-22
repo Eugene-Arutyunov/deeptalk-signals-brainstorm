@@ -371,7 +371,7 @@ const SIGNALS = [
   {
     signal: "Sarcasm",
     description: "— I looked over your report, fixed a couple of spots, sent it to the client myself.\n— Well, thanks. Very helpful.",
-    importance: ["Team health & safety"],
+    importance: ["Team health & safety","Burnout & wellbeing"],
     audioWhy: ["Intonation, not words"],
     categories: ["Tone & intonation","Emotion & mood"],
     authors: ["Irina Zakharova","Graham Gullans"],
@@ -409,7 +409,7 @@ const SIGNALS = [
     signal: "Unvoiced disagreement",
     description: "— …and I'm pulling this neon palette in here, a brutal grotesque, everything hard, punk. Katya, what do you say?\n— …Mm. Well, it's bold, yeah. Kind of… vivid. If you see it that way — there's probably something to it.\n— Exactly! That's what I'm saying — we need to be daring.",
     importance: ["Real agreement check","Team health & safety"],
-    audioWhy: ["Intonation, not words"],
+    audioWhy: ["Intonation, not words","Pause length & timing"],
     categories: ["Agreement & commitment","Tone & intonation"],
     authors: ["Irina Zakharova","Ilya Sinelnikov"],
     ilyaLikes: true, eugeneLikes: true, grahamLikes: false,
